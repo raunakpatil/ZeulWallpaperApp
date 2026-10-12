@@ -295,7 +295,7 @@ Zeul was built by **two developers in about two weeks**, each working with their
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/media/charts/commits-dark.svg">
-    <img src="docs/media/charts/commits-light.svg" width="760" alt="Commits per day by developer: 74 on 30 Sep, 45 on 1 Oct, 59 on 2 Oct, then a handful a day; Raunak 137, Ghanshyam 85 in total">
+    <img src="docs/media/charts/commits-light.svg" width="760" alt="Team commits per day: 74 on 30 Sep, 45 on 1 Oct, 59 on 2 Oct, then a handful a day through the design phase, and the launch on 12 Oct">
   </picture>
 </p>
 

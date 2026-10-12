@@ -6,12 +6,11 @@
 <title>Zeul: Free Open-Source Wallpaper App for Android (HD &amp; AMOLED)</title>
 <meta name="description" content="Zeul is a free, open-source Android wallpaper app with hand-picked HD and AMOLED wallpapers, community uploads, an auto wallpaper changer and no account needed. Download the APK.">
 <link rel="canonical" href="https://raunakpatil.github.io/ZeulWallpaperApp/">
-<meta name="theme-color" content="#0a0a0b">
+<meta name="theme-color" content="#09090a">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon-180.png">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Zeul">
 <meta property="og:title" content="Zeul: free, open-source wallpapers for Android">
@@ -25,255 +24,428 @@
 <meta name="twitter:title" content="Zeul: free, open-source wallpapers for Android">
 <meta name="twitter:description" content="HD and AMOLED wallpapers, community uploads and a soft, tactile design. Free and open source.">
 <meta name="twitter:image" content="https://raunakpatil.github.io/ZeulWallpaperApp/social-preview.png">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://raunakpatil.github.io/ZeulWallpaperApp/#app",
+   "name": "Zeul",
+   "alternateName": "Zeul Wallpapers",
+   "description": "Free, open-source Android wallpaper app with hand-picked HD and AMOLED wallpapers, community uploads, search, previews and an auto wallpaper changer.",
+   "operatingSystem": "Android 8.0 or later",
+   "applicationCategory": "MultimediaApplication",
+   "softwareVersion": "1.0.0",
+   "downloadUrl": "https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest",
+   "installUrl": "https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest",
+   "screenshot": [
+    "https://raunakpatil.github.io/ZeulWallpaperApp/img/home_dark.webp",
+    "https://raunakpatil.github.io/ZeulWallpaperApp/img/preview_dark.webp",
+    "https://raunakpatil.github.io/ZeulWallpaperApp/img/explore_dark.webp"
+   ],
+   "image": "https://raunakpatil.github.io/ZeulWallpaperApp/social-preview.png",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+   "isAccessibleForFree": true,
+   "author": [
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://raunakpatil.github.io/ZeulWallpaperApp/#app",
-      "name": "Zeul",
-      "alternateName": "Zeul Wallpapers",
-      "description": "Free, open-source Android wallpaper app with hand-picked HD and AMOLED wallpapers, community uploads, search, previews and an auto wallpaper changer.",
-      "operatingSystem": "Android 8.0 or later",
-      "applicationCategory": "MultimediaApplication",
-      "softwareVersion": "1.0.0",
-      "downloadUrl": "https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest",
-      "installUrl": "https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest",
-      "screenshot": [
-        "https://raunakpatil.github.io/ZeulWallpaperApp/img/home_dark.webp",
-        "https://raunakpatil.github.io/ZeulWallpaperApp/img/preview_dark.webp",
-        "https://raunakpatil.github.io/ZeulWallpaperApp/img/explore_dark.webp"
-      ],
-      "image": "https://raunakpatil.github.io/ZeulWallpaperApp/social-preview.png",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-      "isAccessibleForFree": true,
-      "author": [
-        { "@type": "Person", "name": "Raunak Patil", "url": "https://github.com/raunakpatil" },
-        { "@type": "Person", "name": "Ghanshyam Paunikar", "url": "https://github.com/GhanshyamPaunikar" }
-      ]
+     "@type": "Person",
+     "name": "Raunak Patil",
+     "url": "https://github.com/raunakpatil"
     },
     {
-      "@type": "SoftwareSourceCode",
-      "name": "Zeul source code",
-      "codeRepository": "https://github.com/raunakpatil/ZeulWallpaperApp",
-      "programmingLanguage": ["Kotlin", "TypeScript", "SQL"],
-      "runtimePlatform": "Android",
-      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-      "targetProduct": { "@id": "https://raunakpatil.github.io/ZeulWallpaperApp/#app" }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Is Zeul free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Zeul is free to download and use, and its source code is open under the GPL-3.0 licence. Some wallpapers unlock after a short ad." } },
-        { "@type": "Question", "name": "How do I install the Zeul APK?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Download the latest APK from the Zeul releases page on GitHub on your Android phone, open it, and allow your browser or file manager to install apps when asked. Android 8.0 or newer is required." } },
-        { "@type": "Question", "name": "Can I upload my own wallpapers?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sign in, tap the upload button on the Home screen, pick a photo, name it and choose a category. It goes live for everyone, credited to you. You can upload 5 wallpapers a day and delete them any time." } },
-        { "@type": "Question", "name": "Do I need an account?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. You can browse, download and set wallpapers without an account. Signing in syncs your favourites across devices and lets you upload." } },
-        { "@type": "Question", "name": "What are AMOLED wallpapers?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Wallpapers with mostly pure black (#000000) backgrounds. On OLED and AMOLED screens black pixels are switched off, so they look deep and can save battery. Zeul has a dedicated AMOLED section." } }
-      ]
+     "@type": "Person",
+     "name": "Ghanshyam Paunikar",
+     "url": "https://github.com/GhanshyamPaunikar"
     }
-  ]
-}
-</script>
-
+   ]
+  },
+  {
+   "@type": "SoftwareSourceCode",
+   "name": "Zeul source code",
+   "codeRepository": "https://github.com/raunakpatil/ZeulWallpaperApp",
+   "programmingLanguage": [
+    "Kotlin",
+    "TypeScript",
+    "SQL"
+   ],
+   "runtimePlatform": "Android",
+   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+   "targetProduct": {
+    "@id": "https://raunakpatil.github.io/ZeulWallpaperApp/#app"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is Zeul free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Zeul is free to download and use, and its source code is open under the GPL-3.0 licence. Some wallpapers unlock after a short ad."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I install the Zeul APK?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Download the latest APK from the Zeul releases page on GitHub on your Android phone, open it, and allow your browser or file manager to install apps when asked. Android 8.0 or newer is required."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I upload my own wallpapers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Sign in, tap the upload button on the Home screen, pick a photo, name it and choose a category. It goes live for everyone, credited to you. You can upload 5 wallpapers a day and delete them any time."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need an account?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. You can browse, download and set wallpapers without an account. Signing in syncs your favourites across devices and lets you upload."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are AMOLED wallpapers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wallpapers with mostly pure black (#000000) backgrounds. On OLED and AMOLED screens black pixels are switched off, so they look deep and can save battery. Zeul has a dedicated AMOLED section."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I build my own app from Zeul?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, under the GPL-3.0: your version must stay open source too. Please use your own name and logo. The README explains how to run it on your own backend."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://raunakpatil.github.io" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0b; --surface: #151517; --raised: #1d1d20; --line: rgba(255,255,255,.08);
-    --text: #f5f5f5; --muted: #a3a2a0; --accent: #eb6834; --accent-2: #ff8a50;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
-  img { max-width: 100%; display: block; }
-  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
-  header.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
-  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font: 400 26px/1 Montserrat, sans-serif; letter-spacing: .06em; }
-  .brand img { width: 40px; height: 40px; border-radius: 10px; }
-  .brand b { color: var(--accent); font-weight: 400; }
-  nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-weight: 600; font-size: 15px; }
-  nav a:hover { color: var(--text); }
-  .hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; padding: 40px 0 72px; position: relative; }
-  .hero::before { content: ""; position: absolute; right: -10%; top: 0; width: 620px; height: 620px; background: radial-gradient(closest-side, rgba(235,104,52,.28), transparent); z-index: -1; }
-  h1 { font: 700 clamp(38px, 5.2vw, 62px)/1.06 Montserrat, sans-serif; margin: 0 0 20px; letter-spacing: -.01em; }
-  h1 span { color: var(--accent); }
-  .lead { color: var(--muted); font-size: 19px; max-width: 34em; margin: 0 0 30px; }
-  .cta { display: flex; flex-wrap: wrap; gap: 14px; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: transform .15s ease, box-shadow .15s ease; }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: linear-gradient(180deg, var(--accent-2), var(--accent)); color: #fff; box-shadow: 0 10px 28px rgba(235,104,52,.35), inset 0 1px 0 rgba(255,255,255,.35); }
-  .btn-ghost { background: var(--raised); border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
-  .meta { color: var(--muted); font-size: 14px; margin-top: 16px; }
-  .phones { display: flex; justify-content: center; align-items: flex-end; gap: 0; }
-  .phone { width: 39%; border-radius: 30px; padding: 6px; background: #262628; box-shadow: 0 30px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.08); }
-  .phone img { border-radius: 25px; }
-  .phone.side { width: 33%; margin: 0 -6%; opacity: .92; }
-  .phone.mid { position: relative; z-index: 2; }
-  section { padding: 72px 0; border-top: 1px solid var(--line); }
-  h2 { font: 700 clamp(28px, 3.4vw, 40px)/1.15 Montserrat, sans-serif; margin: 0 0 14px; }
-  .sub { color: var(--muted); max-width: 40em; margin: 0 0 36px; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .card { background: linear-gradient(180deg, #1f1f22, #18181a); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: 0 14px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06); }
-  .card h3 { margin: 0 0 6px; font-size: 18px; }
-  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
-  .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(235,104,52,.14); color: var(--accent); margin-bottom: 14px; }
-  .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-  .steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
-  .steps li { counter-increment: s; position: relative; padding: 0 0 18px 52px; color: var(--muted); }
-  .steps li strong { color: var(--text); display: block; }
-  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--accent); color: #fff; font-weight: 700; }
-  .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
-  .strip img { border-radius: 18px; border: 1px solid var(--line); }
-  .strip figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 8px; }
-  figure { margin: 0; }
-  details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px; }
-  summary { cursor: pointer; font-weight: 700; list-style: none; }
-  summary::after { content: "+"; float: right; color: var(--accent); font-weight: 700; }
-  details[open] summary::after { content: "–"; }
-  details p { color: var(--muted); margin: 10px 0 0; }
-  .stack { display: flex; flex-wrap: wrap; gap: 10px; }
-  .chip { background: var(--raised); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; font-size: 14px; font-weight: 600; }
-  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
-  footer a { color: var(--muted); margin-right: 18px; }
-  @media (max-width: 860px) {
-    .hero, .split { grid-template-columns: 1fr; }
-    .grid { grid-template-columns: 1fr 1fr; }
-    .strip { grid-template-columns: repeat(3, 1fr); }
-    .strip figure:nth-child(n+4) { display: none; }
-    nav a:not(.gh) { display: none; }
-  }
-  @media (max-width: 560px) {
-    .grid { grid-template-columns: 1fr; }
-    body { font-size: 16px; }
-  }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+:root {
+  --bg: #09090a; --bg-2: #0f0f11; --card: #141416; --card-2: #19191c; --line: rgba(255,255,255,.07); --line-2: rgba(255,255,255,.12);
+  --text: #f4f4f3; --muted: #9c9b98; --dim: #6f6e6b; --accent: #eb6834; --accent-hi: #ff8b55; --accent-soft: rgba(235,104,52,.12);
+  --radius: 20px; --shadow: 0 24px 60px rgba(0,0,0,.55);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16.5px/1.65 Manrope, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+.wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
+h1, h2, h3 { font-family: Montserrat, Manrope, sans-serif; letter-spacing: -.02em; margin: 0; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-hi); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(235,104,52,.18); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 24px; border-radius: 14px; font-weight: 700; font-size: 15.5px; text-decoration: none; white-space: nowrap; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+.btn svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: linear-gradient(180deg, var(--accent-hi), var(--accent)); color: #fff; box-shadow: 0 12px 30px rgba(235,104,52,.32), inset 0 1px 0 rgba(255,255,255,.3); }
+.btn-primary:hover { box-shadow: 0 16px 38px rgba(235,104,52,.42), inset 0 1px 0 rgba(255,255,255,.3); }
+.btn-ghost { background: rgba(255,255,255,.04); border: 1px solid var(--line-2); color: var(--text); }
+.btn-ghost:hover { background: rgba(255,255,255,.08); }
+
+/* header */
+.top { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); background: rgba(9,9,10,.72); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font: 500 22px/1 Montserrat, sans-serif; letter-spacing: .12em; }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.brand b { color: var(--accent); font-weight: 500; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 600; }
+.nav a:hover { color: var(--text); }
+.nav .btn { height: 40px; padding: 0 16px; font-size: 14px; color: #fff; }
+
+/* hero */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; min-height: min(760px, calc(100svh - 68px)); padding-block: 56px; }
+.hero-copy { position: relative; z-index: 3; max-width: 560px; }
+.hero h1 { font-size: clamp(40px, 5.4vw, 68px); line-height: 1.04; font-weight: 700; margin: 20px 0 20px; }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent-hi), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .lead { color: var(--muted); font-size: 18.5px; margin: 0 0 32px; max-width: 30em; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 28px; color: var(--dim); font-size: 14px; font-weight: 600; }
+.facts span { display: inline-flex; align-items: center; gap: 8px; }
+.facts span::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.stage { position: relative; height: 100%; min-height: 560px; display: grid; place-items: center; }
+.wall { position: absolute; inset: -22% -45% -22% -12%; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; transform: rotate(-12deg); opacity: .6;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 50%, #000 35%, transparent 75%); mask-image: radial-gradient(70% 60% at 50% 50%, #000 35%, transparent 75%); z-index: 0; }
+.col { overflow: hidden; }
+.track { display: flex; flex-direction: column; gap: 14px; animation: drift 60s linear infinite; }
+.col.down .track { animation-direction: reverse; animation-duration: 70s; }
+.col.slow .track { animation-duration: 80s; }
+.track img { width: 100%; aspect-ratio: 400 / 717; object-fit: cover; border-radius: 14px; }
+@keyframes drift { from { transform: translateY(0); } to { transform: translateY(calc(-50% - 7px)); } }
+.hero .device { position: relative; z-index: 2; width: min(300px, 70%); }
+.glow { position: absolute; z-index: 1; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(closest-side, rgba(235,104,52,.35), transparent); filter: blur(10px); }
+
+/* device frame */
+.device { aspect-ratio: 400 / 889; border-radius: 40px; padding: 9px; background: linear-gradient(160deg, #2c2c30, #151517); box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.12), 0 0 0 1px rgba(255,255,255,.06); }
+.device img { width: 100%; height: 100%; object-fit: cover; border-radius: 31px; background: #000; }
+
+/* sections */
+section { padding: 104px 0; }
+.head { max-width: 680px; margin-bottom: 52px; }
+.head.center { margin-inline: auto; text-align: center; }
+.head h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12; font-weight: 700; margin: 16px 0 14px; }
+.head p { color: var(--muted); font-size: 18px; margin: 0; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-2); }
+.stat { padding: 26px 28px; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat b { display: block; font: 700 26px/1.2 Montserrat, sans-serif; }
+.stat span { color: var(--muted); font-size: 14.5px; }
+.band { padding: 40px 0; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feature { padding: 28px; border-radius: var(--radius); background: linear-gradient(180deg, var(--card-2), var(--card)); border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgba(255,255,255,.04); transition: border-color .2s ease, transform .2s ease; }
+.feature:hover { border-color: rgba(235,104,52,.35); transform: translateY(-3px); }
+.feature h3 { font-size: 18px; margin: 18px 0 8px; font-weight: 700; }
+.feature p { margin: 0; color: var(--muted); font-size: 15.5px; }
+.ico { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-hi); }
+.ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; align-items: start; }
+.gallery figure { margin: 0; }
+.gallery figure:nth-child(even) { margin-top: 48px; }
+.gallery figcaption { margin-top: 16px; text-align: center; color: var(--muted); font-size: 14px; font-weight: 600; }
+
+.split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: center; }
+.split .device { width: min(320px, 100%); margin-inline: auto; }
+.steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 14px; }
+.steps li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; padding: 18px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+.steps .n { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(180deg, var(--accent-hi), var(--accent)); color: #fff; font-weight: 800; }
+.steps b { display: block; font-size: 16px; }
+.steps span { color: var(--muted); font-size: 15px; }
+.note { color: var(--dim); font-size: 14px; margin-top: 18px; }
+
+.themes { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); justify-content: center; gap: 40px; }
+.themes figcaption { margin-top: 16px; text-align: center; color: var(--muted); font-size: 14px; font-weight: 600; }
+.themes figure { margin: 0; }
+
+.oss { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
+.panel { border-radius: 24px; padding: 40px; background: linear-gradient(180deg, var(--card-2), var(--card)); border: 1px solid var(--line); }
+.panel h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.15; margin-bottom: 14px; font-weight: 700; }
+.panel p { color: var(--muted); margin: 0 0 26px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 7px 13px; border-radius: 10px; background: rgba(255,255,255,.04); border: 1px solid var(--line-2); font-size: 13.5px; font-weight: 600; color: #d6d5d2; }
+.numbers { display: grid; gap: 14px; align-content: start; }
+.numbers div { padding: 22px 26px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); }
+.numbers b { display: block; font: 700 30px/1.15 Montserrat, sans-serif; color: var(--accent-hi); }
+.numbers span { color: var(--muted); font-size: 14.5px; }
+
+.faq { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+details { border-radius: 16px; background: var(--card); border: 1px solid var(--line); padding: 20px 22px; }
+details[open] { border-color: var(--line-2); }
+summary { cursor: pointer; list-style: none; font-weight: 700; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent-hi); font-weight: 800; font-size: 20px; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details p { color: var(--muted); margin: 12px 0 0; font-size: 15.5px; }
+
+.final { position: relative; overflow: hidden; border-radius: 28px; padding: 64px 40px; text-align: center; background: radial-gradient(120% 140% at 50% 0%, rgba(235,104,52,.32), rgba(235,104,52,.06) 55%, transparent), var(--bg-2); border: 1px solid rgba(235,104,52,.25); }
+.final h2 { font-size: clamp(30px, 4vw, 48px); line-height: 1.1; font-weight: 700; margin-bottom: 14px; }
+.final p { color: var(--muted); margin: 0 auto 30px; max-width: 34em; font-size: 18px; }
+.final .cta { justify-content: center; }
+
+footer { border-top: 1px solid var(--line); padding: 36px 0 44px; color: var(--dim); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--text); }
+:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 3px; border-radius: 6px; }
+
+@media (max-width: 980px) {
+  .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-block: 48px 64px; text-align: center; }
+  .hero-copy { margin-inline: auto; }
+  .cta, .facts { justify-content: center; }
+  .hero .lead { margin-inline: auto; }
+  .stage { min-height: 520px; }
+  .wall { inset: -10% -30%; }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); max-width: 620px; margin-inline: auto; }
+  .split, .oss { grid-template-columns: 1fr; gap: 48px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .nav a:not(.btn) { display: none; }
+}
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  section { padding: 76px 0; }
+  .features, .faq { grid-template-columns: 1fr; }
+  .gallery figure:nth-child(even) { margin-top: 0; }
+  .gallery { gap: 18px; }
+  .themes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .device { border-radius: 30px; padding: 7px; }
+  .device img { border-radius: 24px; }
+  .panel { padding: 28px; }
+  .stat { padding: 20px; }
+  .stat b { font-size: 19px; }
+  .stat span { font-size: 13.5px; }
+  .final { padding: 48px 22px; }
+  .btn { width: 100%; }
+  .nav .btn { width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .track { animation: none; }
+  .btn, .feature { transition: none; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="./" aria-label="Zeul home"><img src="icon-192.png" alt="" width="40" height="40"><span><b>Z</b>EUL</span></a>
-    <nav aria-label="Main">
-      <a href="#features">Features</a><a href="#community">Community</a><a href="#faq">FAQ</a>
-      <a class="gh" href="https://github.com/raunakpatil/ZeulWallpaperApp">GitHub</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Zeul home"><img src="icon-192.png" alt="" width="34" height="34"><span><b>Z</b>EUL</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a><a href="#community">Community</a><a href="#open-source">Open source</a><a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest">Download</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-  <div class="hero">
-    <div>
-      <h1>Free, open-source <span>wallpapers</span> for Android</h1>
-      <p class="lead">Zeul is a wallpaper app made by the community, for the community: hand-picked HD and AMOLED wallpapers,
-        uploads from people like you, and a soft, tactile design. No account needed.</p>
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Free · Open source · Android</span>
+      <h1>The <em>open&#8209;source</em> wallpaper app for Android</h1>
+      <p class="lead">Hand-picked HD and AMOLED wallpapers, uploads from the community, and a soft, tactile design. Free, with no account needed.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>
-          Download the APK</a>
-        <a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp">View the source on GitHub</a>
+        <a class="btn btn-primary" href="https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>Download the APK</a>
+        <a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp">View on GitHub</a>
       </div>
-      <p class="meta">Version 1.0.0 · Android 8.0+ · about 7 MB · GPL-3.0</p>
+      <div class="facts"><span>Version 1.0.0</span><span>Android 8.0+</span><span>7 MB</span><span>GPL-3.0</span></div>
     </div>
-    <div class="phones" aria-hidden="false">
-      <div class="phone side"><img src="img/home_dark.webp" width="400" height="889" alt="Zeul home feed with For You, Curated and Popular wallpapers"></div>
-      <div class="phone mid"><img src="img/preview_dark.webp" width="400" height="889" alt="Full-screen wallpaper preview with tags, colour palette and Set Wallpaper button"></div>
-      <div class="phone side"><img src="img/explore_dark.webp" width="400" height="889" alt="Explore screen with photo category cards: Minimal, Nature, Space"></div>
+    <div class="stage" aria-hidden="true">
+      <div class="wall"><div class="col down slow"><div class="track"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/f4c72fcfa8/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/ce50ce5481/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/4e17585f93/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/7eff9c961d/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/f4c72fcfa8/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/ce50ce5481/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/4e17585f93/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/7eff9c961d/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"></div></div><div class="col up"><div class="track"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/d5c77d0f32/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/78f8ffc5c3/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/3dde02eb59/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/be9eaeb0a4/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/d5c77d0f32/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/78f8ffc5c3/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/3dde02eb59/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/be9eaeb0a4/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"></div></div><div class="col down"><div class="track"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/166b540f20/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/32eda5e5f4/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/9b2840a95b/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/88cb0455fe/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/166b540f20/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/32eda5e5f4/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/9b2840a95b/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/88cb0455fe/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"></div></div><div class="col up slow"><div class="track"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/d46c41df91/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/fe7bd2a324/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/45ebc3c055/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/d46c41df91/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/fe7bd2a324/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/45ebc3c055/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"></div></div><div class="col down"><div class="track"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/1711d64c42/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/b4766e4cc9/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/1ced346563/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/f4c72fcfa8/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/1711d64c42/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/b4766e4cc9/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/1ced346563/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"><img src="https://raunakpatil.github.io/wallpaper-cdn/w/f4c72fcfa8/thumb.webp" alt="" width="400" height="717" loading="eager" decoding="async"></div></div></div>
+      <div class="glow"></div>
+      <div class="device"><img src="img/preview_dark.webp" width="400" height="889" alt="" decoding="async"></div>
     </div>
   </div>
-
-  <section id="features">
-    <h2>Everything a wallpaper app should be</h2>
-    <p class="sub">Fast, beautiful and respectful of your phone: browse a growing collection, preview wallpapers on a home or lock screen, and set them in one tap.</p>
-    <div class="grid">
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3.5c.7 4.4 2.6 6.4 7 7.5-4.4 1.1-6.3 3.1-7 7.5-.7-4.4-2.6-6.4-7-7.5 4.4-1.1 6.3-3.1 7-7.5z"/></svg></div>
-        <h3>Curated HD wallpapers</h3><p>For You learns your style. Plus Curated, Popular this week, New and Tablet sections.</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M19.5 14.6A8 8 0 1 1 9.4 4.5a6.4 6.4 0 0 0 10.1 10.1z"/></svg></div>
-        <h3>AMOLED black</h3><p>Pure-black wallpapers that look deep on OLED screens and can save battery.</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 11a7 7 0 1 0 14 0 7 7 0 1 0-14 0M16.2 16.2 20.5 20.5"/></svg></div>
-        <h3>Smart search</h3><p>Autocomplete, trending tags and filters for colour, device, AMOLED and category.</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6.5 11h11a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></div>
-        <h3>Real previews</h3><p>See any wallpaper on a home or lock screen mock-up, then crop, blur or dim before applying.</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h11M4 17h16M17 4l3 3-3 3M7 14l-3 3 3 3"/></svg></div>
-        <h3>Auto wallpaper changer</h3><p>A fresh wallpaper from your favourites or a category every few hours, automatically.</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-8-4.9-8-11a4.4 4.4 0 0 1 8-2.5A4.4 4.4 0 0 1 20 9c0 6.1-8 11-8 11z"/></svg></div>
-        <h3>Favourites, offline</h3><p>Save what you love; it works offline and syncs to your account if you sign in.</p></div>
-    </div>
-  </section>
-
-  <section id="community">
-    <div class="split">
-      <div>
-        <h2>By the community, for the community</h2>
-        <p class="sub">Zeul's code is open to everyone, and so is the collection. Share your own wallpapers in four steps:</p>
-        <ol class="steps">
-          <li><strong>Sign in</strong>with Google or a one-time email code.</li>
-          <li><strong>Tap upload on Home</strong>and pick a photo (at least 720 × 1280).</li>
-          <li><strong>Name it and choose a category</strong>and confirm you have the rights to share it.</li>
-          <li><strong>Publish</strong>It's live for everyone within a couple of minutes, credited to you.</li>
-        </ol>
-        <p class="meta">Uploads are moderated by the community: anything that's reported several times is hidden until reviewed. Your photos are re-encoded on your phone first, which removes location data.</p>
-      </div>
-      <div class="phones">
-        <div class="phone mid" style="width:56%"><img src="img/upload_dark.webp" width="400" height="889" alt="Upload a wallpaper screen in the Zeul app" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="screens">
-    <h2>A soft, tactile design</h2>
-    <p class="sub">Light mode is neumorphic and calm; dark mode is orange on black with real depth. Both feel physical, with springy motion and haptics.</p>
-    <div class="strip">
-      <figure><img src="img/home_light.webp" width="400" height="889" alt="Zeul home feed in light mode" loading="lazy"><figcaption>Home, light</figcaption></figure>
-      <figure><img src="img/preview_lock_dark.webp" width="400" height="889" alt="Lock screen preview of a wallpaper" loading="lazy"><figcaption>Lock screen preview</figcaption></figure>
-      <figure><img src="img/search_dark.webp" width="400" height="889" alt="Search screen with filters and trending tags" loading="lazy"><figcaption>Search</figcaption></figure>
-      <figure><img src="img/onboarding3_dark.webp" width="400" height="889" alt="Pick your styles during onboarding" loading="lazy"><figcaption>Pick your styles</figcaption></figure>
-      <figure><img src="img/profile_light.webp" width="400" height="889" alt="Profile and settings in light mode" loading="lazy"><figcaption>Profile</figcaption></figure>
-    </div>
-  </section>
-
-  <section id="open-source">
-    <h2>Open source, built in the open</h2>
-    <p class="sub">Read the code, learn how it works, or help build it. Zeul is licensed under GPL-3.0, and contributions of code, design and wallpapers are welcome.</p>
-    <div class="stack">
-      <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Material 3</span><span class="chip">Hilt</span>
-      <span class="chip">Room</span><span class="chip">WorkManager</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span>
-      <span class="chip">Edge functions</span><span class="chip">React dashboard</span><span class="chip">GitHub Pages CDN</span>
-    </div>
-    <p style="margin-top:28px"><a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp#architecture">See the architecture</a>
-      &nbsp; <a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp/blob/main/CONTRIBUTING.md">Contribute</a></p>
-  </section>
-
-  <section id="faq">
-    <h2>Questions</h2>
-    <details><summary>Is Zeul free?</summary><p>Yes. Zeul is free to download and use, and its source code is open under the GPL-3.0 licence. Some wallpapers unlock after a short ad.</p></details>
-    <details><summary>How do I install the Zeul APK?</summary><p>Download the latest APK from the Zeul releases page on GitHub on your Android phone, open it, and allow your browser or file manager to install apps when asked. Android 8.0 or newer is required.</p></details>
-    <details><summary>Can I upload my own wallpapers?</summary><p>Yes. Sign in, tap the upload button on the Home screen, pick a photo, name it and choose a category. It goes live for everyone, credited to you. You can upload 5 wallpapers a day and delete them any time.</p></details>
-    <details><summary>Do I need an account?</summary><p>No. You can browse, download and set wallpapers without an account. Signing in syncs your favourites across devices and lets you upload.</p></details>
-    <details><summary>What are AMOLED wallpapers?</summary><p>Wallpapers with mostly pure black (#000000) backgrounds. On OLED and AMOLED screens black pixels are switched off, so they look deep and can save battery. Zeul has a dedicated AMOLED section.</p></details>
-  </section>
-  </main>
 </div>
+
+<div class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>Free</b><span>No paywall to browse or set</span></div>
+      <div class="stat"><b>Open source</b><span>Every line on GitHub</span></div>
+      <div class="stat"><b>No account</b><span>Sign in only if you want sync</span></div>
+      <div class="stat"><b>Community</b><span>Anyone can share wallpapers</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Features</span><h2>Everything a wallpaper app should be</h2>
+      <p>Fast, beautiful and respectful of your phone. Browse a growing collection, preview it on your screen, set it in one tap.</p></div>
+    <div class="features"><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c.7 4.4 2.6 6.4 7 7.5-4.4 1.1-6.3 3.1-7 7.5-.7-4.4-2.6-6.4-7-7.5 4.4-1.1 6.3-3.1 7-7.5z"/></svg></span><h3>Curated HD wallpapers</h3><p>For You learns your style. Plus Curated, Popular this week, New and Tablet sections.</p></article><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 14.6A8 8 0 1 1 9.4 4.5a6.4 6.4 0 0 0 10.1 10.1z"/></svg></span><h3>AMOLED black</h3><p>Pure-black wallpapers that look deep on OLED screens and can save battery.</p></article><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a7 7 0 1 0 14 0 7 7 0 1 0-14 0M16.2 16.2 20.5 20.5"/></svg></span><h3>Search that gets you</h3><p>Autocomplete, trending tags, and filters for colour, device, AMOLED and category.</p></article><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 11h11a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span><h3>Preview first</h3><p>Try any wallpaper on a home or lock screen mock-up, then crop, blur or dim it.</p></article><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 17h16M17 4l3 3-3 3M7 14l-3 3 3 3"/></svg></span><h3>Auto changer</h3><p>A fresh wallpaper from your favourites or a category every few hours.</p></article><article class="feature"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.9-8-11a4.4 4.4 0 0 1 8-2.5A4.4 4.4 0 0 1 20 9c0 6.1-8 11-8 11z"/></svg></span><h3>Favourites, offline</h3><p>Save what you love. It works offline and syncs if you sign in.</p></article></div>
+  </div>
+</section>
+
+<section id="screens" style="background:var(--bg-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head center"><span class="eyebrow">The app</span><h2>See it in action</h2>
+      <p>A calm feed, full-screen previews and photo-led categories, all in orange on black.</p></div>
+    <div class="gallery">
+      <figure><div class="device "><img src="img/home_dark.webp" width="400" height="889" alt="Zeul home feed with For You, Curated and Popular wallpapers" loading="lazy" decoding="async"></div><figcaption>Home</figcaption></figure>
+      <figure><div class="device "><img src="img/preview_dark.webp" width="400" height="889" alt="Full-screen wallpaper preview with tags, colour palette and Set Wallpaper button" loading="lazy" decoding="async"></div><figcaption>Preview</figcaption></figure>
+      <figure><div class="device "><img src="img/preview_lock_dark.webp" width="400" height="889" alt="Lock screen preview of a wallpaper with the clock" loading="lazy" decoding="async"></div><figcaption>Lock screen preview</figcaption></figure>
+      <figure><div class="device "><img src="img/explore_dark.webp" width="400" height="889" alt="Explore screen with photo category cards" loading="lazy" decoding="async"></div><figcaption>Explore</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap split">
+    <div>
+      <div class="head" style="margin-bottom:0"><span class="eyebrow">Community</span><h2>By the community, for the community</h2>
+        <p>The code is open to everyone, and so is the collection. Share your own wallpapers in four steps.</p></div>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>Sign in</b><span>With Google or a one-time email code.</span></div></li>
+        <li><span class="n">2</span><div><b>Tap upload on Home</b><span>Pick a photo, at least 720 × 1280.</span></div></li>
+        <li><span class="n">3</span><div><b>Name it and pick a category</b><span>Confirm you have the right to share it.</span></div></li>
+        <li><span class="n">4</span><div><b>Publish</b><span>Live for everyone within a couple of minutes, credited to you.</span></div></li>
+      </ol>
+      <p class="note">Anything reported by several people is hidden until it's reviewed. Photos are re-encoded on your phone first, which removes location data.</p>
+    </div>
+    <div class="device "><img src="img/upload_dark.webp" width="400" height="889" alt="The Upload a wallpaper screen in Zeul" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section id="themes" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center"><span class="eyebrow">Design</span><h2>Light or dark, it feels physical</h2>
+      <p>A soft neumorphic light theme and an orange-on-black dark theme, with springy motion and haptics in both.</p></div>
+    <div class="themes">
+      <figure><div class="device "><img src="img/home_light.webp" width="400" height="889" alt="Zeul home feed in the light theme" loading="lazy" decoding="async"></div><figcaption>Light</figcaption></figure>
+      <figure><div class="device "><img src="img/home_dark.webp" width="400" height="889" alt="Zeul home feed in the dark theme" loading="lazy" decoding="async"></div><figcaption>Dark</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="open-source" style="padding-top:0">
+  <div class="wrap oss">
+    <div class="panel">
+      <span class="eyebrow">Open source</span>
+      <h2 style="margin-top:16px">Read it, learn from it, make it better</h2>
+      <p>Zeul is licensed under GPL-3.0. The Android app, the database, the edge functions and the admin dashboard are all on GitHub, with architecture diagrams and a guide to running your own.</p>
+      <div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Material 3</span><span class="chip">Hilt</span><span class="chip">Room</span><span class="chip">WorkManager</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Edge functions</span><span class="chip">React</span></div>
+      <div class="cta" style="margin-top:30px"><a class="btn btn-primary" href="https://github.com/raunakpatil/ZeulWallpaperApp">View the source</a><a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp/blob/main/CONTRIBUTING.md">Contribute</a></div>
+    </div>
+    <div class="numbers">
+      <div><b>24,000+</b><span>lines of code</span></div>
+      <div><b>104</b><span>automated unit tests</span></div>
+      <div><b>2</b><span>developers, 2 weeks</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center"><span class="eyebrow">FAQ</span><h2>Questions</h2></div>
+    <div class="faq"><details><summary>Is Zeul free?</summary><p>Yes. Zeul is free to download and use, and its source code is open under the GPL-3.0 licence. Some wallpapers unlock after a short ad.</p></details><details><summary>How do I install the Zeul APK?</summary><p>Download the latest APK from the Zeul releases page on GitHub on your Android phone, open it, and allow your browser or file manager to install apps when asked. Android 8.0 or newer is required.</p></details><details><summary>Can I upload my own wallpapers?</summary><p>Yes. Sign in, tap the upload button on the Home screen, pick a photo, name it and choose a category. It goes live for everyone, credited to you. You can upload 5 wallpapers a day and delete them any time.</p></details><details><summary>Do I need an account?</summary><p>No. You can browse, download and set wallpapers without an account. Signing in syncs your favourites across devices and lets you upload.</p></details><details><summary>What are AMOLED wallpapers?</summary><p>Wallpapers with mostly pure black (#000000) backgrounds. On OLED and AMOLED screens black pixels are switched off, so they look deep and can save battery. Zeul has a dedicated AMOLED section.</p></details><details><summary>Can I build my own app from Zeul?</summary><p>Yes, under the GPL-3.0: your version must stay open source too. Please use your own name and logo. The README explains how to run it on your own backend.</p></details></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <h2>Make your screen yours</h2>
+      <p>Free wallpapers, from the community, in an app you can read line by line.</p>
+      <div class="cta"><a class="btn btn-primary" href="https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>Download Zeul for Android</a><a class="btn btn-ghost" href="https://github.com/raunakpatil/ZeulWallpaperApp">Star on GitHub</a></div>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap">
     <div>© 2026 Raunak Patil &amp; Ghanshyam Paunikar · Code under GPL-3.0</div>
-    <div>
+    <nav aria-label="Footer">
       <a href="https://raunakpatil.github.io/wallpaper-app-site/privacy.html">Privacy</a>
       <a href="https://raunakpatil.github.io/wallpaper-app-site/terms.html">Terms</a>
       <a href="https://github.com/raunakpatil/ZeulWallpaperApp/issues">Report a bug</a>
       <a href="https://github.com/raunakpatil/ZeulWallpaperApp">GitHub</a>
-    </div>
+    </nav>
   </div>
 </footer>
 </body>
