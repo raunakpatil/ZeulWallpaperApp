@@ -38,6 +38,8 @@
         <td>If you're signed in (otherwise only on your device)</td><td>Personalised "For You" suggestions</td></tr>
     <tr><td><strong>Search terms</strong></td><td>When you search</td>
         <td>Stored without any account or device link, to learn which wallpapers people are looking for</td></tr>
+    <tr><td><strong>Wallpapers you upload:</strong> the image, its title, tags and category, linked to your account. Your display name is shown publicly as the author. The app re-encodes images on your phone before uploading, which removes location and camera details (EXIF)</td>
+        <td>Only if you upload</td><td>Publishing your wallpaper in the app, crediting you, enforcing the daily limit and handling reports. Delete any upload from <em>Profile → Your uploads</em>; deleting your account deletes them too</td></tr>
     <tr><td><strong>Reports</strong> you send about a wallpaper, with your install ID (and account, if signed in)</td>
         <td>Only if you report something</td><td>Reviewing copyright or content complaints</td></tr>
     <tr><td><strong>Advertising data:</strong> advertising ID, IP address, device and app information, ad interactions</td>
@@ -47,7 +49,7 @@
     <tr><td><strong>Notification data:</strong> a push token for your device and the notification topics you're subscribed to (new wallpapers, daily wallpaper)</td>
         <td>If notifications are on</td><td>Sending the notifications you chose, through Firebase Cloud Messaging. You can turn each one off in the app or in Android settings</td></tr>
   </table>
-  <p>We do <strong>not</strong> access your photos, contacts, location, camera or microphone. The app saves wallpapers you
+  <p>We do <strong>not</strong> access your photos (except the one image you pick to upload, through Android's photo picker), contacts, location, camera or microphone. The app saves wallpapers you
     choose to download to your gallery and sets your wallpaper only when you ask it to.</p>
   <!-- Keep in sync with the Play Data safety form. If Firebase Analytics or Crashlytics are added, add them to sections 2 and 4. -->
 

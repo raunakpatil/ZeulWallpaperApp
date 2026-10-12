@@ -12,7 +12,8 @@
 // them, commits them to the CDN and inserts the row with the service role. Uploads go live
 // straight away (publish_at = now + 90 s so GitHub Pages has the files before the app shows them).
 // Guardrails: real (non-anonymous) account, not upload_banned, app_config.user_uploads.enabled,
-// daily_limit per user; reports auto-hide user uploads (migration 1300).
+// daily_limit per user; reports auto-hide user uploads (migration 1300). GET also deletes the CDN
+// files of user uploads removed elsewhere, e.g. by account deletion (queue from migration 1400).
 // Deploy: npx supabase functions deploy user-upload --project-ref <ref>   (JWT verified by the gateway)
 import { createClient, type SupabaseClient, type User } from "jsr:@supabase/supabase-js@2";
 import { corsHeaders, json } from "../_shared/cors.ts";
@@ -75,7 +76,21 @@ function cleanTags(raw: string): string[] {
   return [...out];
 }
 
+/** Removes CDN folders of deleted user uploads (queued by migration 1400, e.g. when an account is deleted). */
+async function purgeDeleted(db: SupabaseClient): Promise<void> {
+  const { data: keys } = await db.rpc("cdn_delete_queue_take", { max_items: 5 });
+  for (const key of (keys ?? []) as string[]) {
+    try {
+      await deleteDir(configFromEnv(), key, `remove deleted upload ${key}`);
+      await db.rpc("cdn_delete_queue_done", { key });
+    } catch (e) {
+      console.error("purge failed", key, e);
+    }
+  }
+}
+
 async function handleStatus(db: SupabaseClient, user: User): Promise<Response> {
+  await purgeDeleted(db).catch((e) => console.error(e));
   const cfg = await uploadConfig(db);
   const used = await usedToday(db, user.id);
   return json({ enabled: cfg.enabled, daily_limit: cfg.daily_limit, used_today: used, remaining: Math.max(cfg.daily_limit - used, 0) });
@@ -178,7 +193,9 @@ async function handleDelete(url: URL, db: SupabaseClient, user: User): Promise<R
   if (!w || w.uploader_id !== user.id) return json({ error: "not found" }, 404);
   const { error } = await db.from("wallpapers").delete().eq("id", id);
   if (error) throw new Error(`delete failed: ${error.message}`);
-  await deleteDir(configFromEnv(), w.storage_key, `user removed ${w.storage_key}`).catch((e) => console.error(e));
+  await deleteDir(configFromEnv(), w.storage_key, `user removed ${w.storage_key}`)
+    .then(() => db.rpc("cdn_delete_queue_done", { key: w.storage_key }))
+    .catch((e) => console.error(e));
   return json({ id, deleted: true });
 }
 

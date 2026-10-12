@@ -4,9 +4,11 @@
   "CONTACT_EMAIL": "zeulwallpapers@gmail.com",
   "PUBLISHERS": "Raunak Patil and Ghanshyam Paunikar",
   "COUNTRY": "India",
-  "EFFECTIVE_DATE": "30 September 2026",
+  "EFFECTIVE_DATE": "12 October 2026",
   "PLAY_STORE_URL": "",
   "ANDROID_PACKAGE": "com.zeul.wallpapers",
   "ADMOB_PUBLISHER_ID": "pub-5768927601360645",
-  "SHA256_CERT_FINGERPRINTS": []
+  "SHA256_CERT_FINGERPRINTS": [
+    "A8:B1:98:72:52:99:7D:A9:03:09:41:52:5F:20:29:F5:DF:A4:B3:3F:4F:5D:4F:9E:9A:A5:58:F6:BF:0F:42:F3"
+  ]
 }
