@@ -429,7 +429,7 @@ Yes, under the GPL-3.0: your fork must stay open source. Please use your own nam
 | **[Raunak Patil](https://github.com/raunakpatil)** | Backend, dashboard, ads & billing, design system, launch |
 | **[Ghanshyam Paunikar](https://github.com/GhanshyamPaunikar)** | Android app: UI, data layer, preview, search, onboarding, tablets, background work |
 
-Built with [Claude Code](https://claude.com/claude-code). Wallpapers belong to their creators: curated ones are licensed for the app, community ones are shared by their uploaders.
+Wallpapers belong to their creators: curated ones are licensed for the app, community ones are shared by their uploaders.
 
 ## License
 
