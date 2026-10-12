@@ -4,10 +4,12 @@
 
 # Zeul
 
-**Wallpapers by the community, for the community.**
+**Free, open-source wallpapers for Android. By the community, for the community.**
 
-An open-source Android wallpaper app: hand-picked, AMOLED-black and community-uploaded wallpapers,
-a soft tactile UI, and a backend that runs entirely on free tiers.
+Zeul is a free, open-source **Android wallpaper app** with hand-picked HD and **AMOLED wallpapers**, community uploads,
+an auto wallpaper changer and a soft, tactile UI. No account needed. Built with Kotlin, Jetpack Compose and Supabase.
+
+**[Website](https://raunakpatil.github.io/zeul/)** · **[Download the APK](https://github.com/raunakpatil/zeul/releases/latest)** · **[Contribute](CONTRIBUTING.md)**
 
 [![Download](https://img.shields.io/github/v/release/raunakpatil/zeul?label=Download%20APK&color=EB6834&logo=android&logoColor=white)](https://github.com/raunakpatil/zeul/releases/latest)
 [![CI](https://github.com/raunakpatil/zeul/actions/workflows/ci.yml/badge.svg)](https://github.com/raunakpatil/zeul/actions/workflows/ci.yml)
@@ -36,6 +38,7 @@ a soft tactile UI, and a backend that runs entirely on free tiers.
 - [Project structure](#project-structure)
 - [Build it yourself](#build-it-yourself)
 - [Contributing](#contributing)
+- [FAQ](#faq)
 - [Credits](#credits) · [License](#license)
 
 ## Download
@@ -386,6 +389,38 @@ and please follow the **[Code of Conduct](CODE_OF_CONDUCT.md)**. Found a securit
 - 🐛 [Report a bug](https://github.com/raunakpatil/zeul/issues/new?template=bug_report.yml)
 - 💡 [Suggest a feature](https://github.com/raunakpatil/zeul/issues/new?template=feature_request.yml)
 - 💬 [Ask or share in Discussions](https://github.com/raunakpatil/zeul/discussions)
+
+## FAQ
+
+<details><summary><b>Is Zeul free?</b></summary>
+
+Yes. Zeul is free to download and use, and its source code is open under GPL-3.0. Some wallpapers unlock after a short ad.
+</details>
+
+<details><summary><b>How do I install the Zeul APK on Android?</b></summary>
+
+Open the [latest release](https://github.com/raunakpatil/zeul/releases/latest) on your phone, download `zeul-1.0.0.apk`, open it and allow your browser or file manager to install apps when asked. Android 8.0 or newer.
+</details>
+
+<details><summary><b>Can I upload my own wallpapers?</b></summary>
+
+Yes. Sign in, tap the upload button on Home, pick a photo (at least 720 × 1280), name it and choose a category. It goes live for everyone, credited to you. Up to 5 a day; delete them any time from Profile → Your uploads.
+</details>
+
+<details><summary><b>Do I need an account?</b></summary>
+
+No. Browsing, downloading and setting wallpapers work without one. Signing in syncs favourites across devices and lets you upload.
+</details>
+
+<details><summary><b>What are AMOLED wallpapers?</b></summary>
+
+Wallpapers with mostly pure black (#000000) backgrounds. On OLED / AMOLED screens black pixels are off, so they look deep and can save battery. Zeul has a dedicated AMOLED section.
+</details>
+
+<details><summary><b>Can I fork Zeul and build my own wallpaper app?</b></summary>
+
+Yes, under the GPL-3.0: your fork must stay open source. Please use your own name and logo. [Build it yourself](#build-it-yourself) shows how to run it on your own backend.
+</details>
 
 ## Credits
 

@@ -1,0 +1,41 @@
+# Publishes the landing page (website/) to GitHub Pages: https://raunakpatil.github.io/zeul/
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths: ['website/**', 'docs/media/**', 'brand/out/web/**', '.github/workflows/pages.yml']
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Assemble the site
+        run: |
+          mkdir -p _site/img
+          cp website/* _site/
+          cp docs/media/screens/*.webp _site/img/
+          cp docs/media/social-preview.png _site/
+          cp brand/out/web/favicon.ico brand/out/web/favicon-32.png brand/out/web/icon-192.png brand/out/web/apple-touch-icon-180.png _site/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
