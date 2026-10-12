@@ -190,7 +190,8 @@ flowchart LR
     Dash --> EF
     EF -- "push" --> FCM --> Phone
     Phone -.-> Ads
-    Phone -.-> RC -. "webhook" .-> EF
+    Phone -.-> RC
+    RC -. webhook .-> EF
 ```
 
 **Why this shape:** the whole thing had to cost nothing while it grows. Postgres does the heavy lifting
