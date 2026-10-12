@@ -1,0 +1,404 @@
+/* =====================================================================
+   Zeul Studio design tokens
+   Light = bright Jobie-style (lavender canvas, white cards, purple sidebar)
+   Dark  = tactile glass (textured charcoal, inner+outer shadows, blue/gold glow)
+   ===================================================================== */
+:root {
+  /* brand gradient (kept under the old name so existing classes keep working) */
+  --ig-gradient: linear-gradient(135deg, #7b5cff 0%, #5524f3 45%, #1f7cfa 100%);
+  --brand-gradient: var(--ig-gradient);
+  --glow-blue: 31, 124, 250;
+  --glow-brand: 85, 36, 243;
+  --glow-gold: 255, 186, 56;
+
+  /* radius steps */
+  --r-1: 4px; --r-2: 8px; --r-3: 12px; --r-4: 18px;
+  /* border thickness */
+  --b-subtle: 0.5px; --b-std: 1px; --b-strong: 1.5px;
+
+  /* light surfaces */
+  --canvas: #f3f3fa;
+  --surface: #ffffff;
+  --surface-line: rgba(30, 20, 80, 0.06);
+  --shadow-1: 0 1px 2px rgba(30, 20, 80, 0.05), 0 2px 8px rgba(30, 20, 80, 0.04);
+  --shadow-2: 0 2px 4px rgba(30, 20, 80, 0.05), 0 10px 28px rgba(30, 20, 80, 0.08);
+  --shadow-3: 0 6px 12px rgba(30, 20, 80, 0.08), 0 24px 56px rgba(30, 20, 80, 0.16);
+  --inner-hi: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --soft-shadow: var(--shadow-2);
+
+  /* sidebar */
+  --sidebar-bg: linear-gradient(180deg, #5b2ee6 0%, #4417d4 60%, #3a12bd 100%);
+  --sidebar-fg: #ffffff;
+  --sidebar-dim: rgba(255, 255, 255, 0.68);
+  --sidebar-active-bg: var(--canvas);
+  --sidebar-active-fg: #4517d9;
+}
+
+:root[data-mantine-color-scheme='dark'] {
+  --canvas: #15161b;
+  --surface: linear-gradient(160deg, #2b2d35 0%, #23252c 100%);
+  --surface-line: rgba(255, 255, 255, 0.07);
+  --shadow-1: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-2: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px 0 rgba(0, 0, 0, 0.35), 0 10px 26px rgba(0, 0, 0, 0.45);
+  --shadow-3: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 60px rgba(0, 0, 0, 0.6);
+  --inner-hi: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --sidebar-bg: linear-gradient(180deg, #23252d 0%, #1b1c22 100%);
+  --sidebar-dim: rgba(255, 255, 255, 0.55);
+  --sidebar-active-bg: linear-gradient(135deg, rgba(var(--glow-blue), 0.32), rgba(var(--glow-brand), 0.28));
+  --sidebar-active-fg: #ffffff;
+  --mantine-color-body: #15161b;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--canvas);
+}
+/* Tactile dark canvas: faint grain + vignette, like the reference board */
+:root[data-mantine-color-scheme='dark'] body {
+  background:
+    radial-gradient(1200px 700px at 70% -10%, rgba(var(--glow-blue), 0.10), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(var(--glow-gold), 0.06), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    var(--canvas);
+}
+.mantine-AppShell-main { background: transparent; }
+
+/* ---------------------------------------------------------------- surfaces */
+.mantine-Card-root,
+.mantine-Paper-root.mantine-Card-root {
+  background: var(--surface);
+  border-color: var(--surface-line) !important;
+  box-shadow: var(--shadow-1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.soft-card { box-shadow: var(--shadow-2) !important; }
+a.mantine-Card-root:hover, .lift:hover { box-shadow: var(--shadow-3) !important; transform: translateY(-2px); }
+.mantine-Modal-content, .mantine-Drawer-content, .mantine-Popover-dropdown, .mantine-Menu-dropdown, .mantine-Spotlight-content {
+  background: var(--surface);
+  box-shadow: var(--shadow-3);
+  border: var(--b-std) solid var(--surface-line);
+}
+
+/* ---------------------------------------------------------------- controls */
+.mantine-Button-root { transition: box-shadow 0.2s ease, transform 0.08s ease, filter 0.2s ease; }
+.mantine-Button-root:active:not(:disabled) { transform: translateY(1px) scale(0.99); }
+.mantine-Button-root[data-variant='gradient'] {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 14px -4px rgba(var(--glow-brand), 0.55);
+}
+.mantine-Button-root[data-variant='gradient']:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(var(--glow-blue), 0.18), 0 8px 26px -4px rgba(var(--glow-blue), 0.6);
+}
+.mantine-Button-root[data-variant='default'] { box-shadow: var(--inner-hi), var(--shadow-1); }
+/* Disabled: lower contrast, no shadow (token sheet) */
+.mantine-Button-root:disabled, .mantine-Button-root[data-disabled] { box-shadow: none !important; filter: saturate(0.4); }
+
+/* Focus ring is always visible and soft */
+.mantine-Input-input:focus, .mantine-Input-input:focus-within,
+.mantine-PillsInput-input:focus-within {
+  border-color: rgba(var(--glow-blue), 0.85);
+  box-shadow: 0 0 0 3px rgba(var(--glow-blue), 0.18), 0 0 18px rgba(var(--glow-blue), 0.25);
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Input-input {
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+:focus-visible { outline-color: rgba(var(--glow-blue), 0.9); }
+
+/* Toggles with a gentle glow when on */
+.mantine-Switch-track[data-checked], .mantine-Switch-input:checked + .mantine-Switch-track {
+  box-shadow: 0 0 12px rgba(var(--glow-blue), 0.55);
+}
+.mantine-SegmentedControl-root { box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12); }
+.mantine-SegmentedControl-indicator { box-shadow: var(--inner-hi), 0 2px 8px rgba(0, 0, 0, 0.15); }
+.mantine-Progress-section { box-shadow: 0 0 10px rgba(var(--glow-blue), 0.5); }
+.mantine-Notification-root { box-shadow: var(--shadow-3); border: var(--b-std) solid var(--surface-line); }
+.mantine-Table-tr[data-hover]:hover, .mantine-Table-tbody .mantine-Table-tr:hover { background: rgba(var(--glow-blue), 0.06); }
+
+/* ---------------------------------------------------------------- sidebar (Jobie cut-out tab) */
+.app-sidebar {
+  background: var(--sidebar-bg) !important;
+  color: var(--sidebar-fg);
+  border-right: 0 !important;
+  --mantine-color-dimmed: var(--sidebar-dim);
+  --mantine-color-text: var(--sidebar-fg);
+  overflow: visible;
+}
+:root[data-mantine-color-scheme='dark'] .app-sidebar { box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.05), 8px 0 30px rgba(0, 0, 0, 0.35); }
+.app-sidebar .ig-text { background: none; -webkit-text-fill-color: #fff; color: #fff; }
+.app-sidebar .ig-logo { background: rgba(255, 255, 255, 0.16); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); }
+.app-sidebar .mantine-ActionIcon-root { color: var(--sidebar-fg); }
+.app-sidebar .mantine-ActionIcon-root:hover { background: rgba(255, 255, 255, 0.12); }
+.app-sidebar .nav-group-label { color: var(--sidebar-dim); }
+
+.app-sidebar .nav-item {
+  color: var(--sidebar-fg);
+  border-radius: 14px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.app-sidebar .nav-item .mantine-NavLink-description { color: var(--sidebar-dim); }
+.app-sidebar .nav-item:hover:not([data-active]) { background: rgba(255, 255, 255, 0.10); }
+/* The nav list runs to the sidebar edge so the active tab can join the page; others keep a right gap. */
+.app-sidebar { padding-right: 0 !important; }
+.app-sidebar > .mantine-AppShell-section:not(.nav-section) { padding-right: var(--mantine-spacing-md); }
+.app-sidebar .nav-section .mantine-ScrollArea-viewport { overflow-x: visible !important; }
+.app-sidebar .nav-item { margin-right: var(--mantine-spacing-md); width: auto; }
+.app-sidebar .nav-group-label { margin-right: var(--mantine-spacing-md); }
+.app-sidebar .nav-item[data-active] {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-active-fg);
+  margin-right: 0;
+  padding-right: calc(var(--mantine-spacing-md) + 12px);
+  border-radius: 999px 0 0 999px;
+  position: relative;
+}
+.app-sidebar .nav-item[data-active] .mantine-NavLink-description { color: inherit; opacity: 0.7; }
+/* Inverted corners make the active tab flow into the page (light mode) */
+:root:not([data-mantine-color-scheme='dark']) .app-sidebar .nav-item[data-active]::before,
+:root:not([data-mantine-color-scheme='dark']) .app-sidebar .nav-item[data-active]::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  pointer-events: none;
+}
+:root:not([data-mantine-color-scheme='dark']) .app-sidebar .nav-item[data-active]::before { top: -20px; border-bottom-right-radius: 20px; box-shadow: 6px 6px 0 6px var(--canvas); }
+:root:not([data-mantine-color-scheme='dark']) .app-sidebar .nav-item[data-active]::after { bottom: -20px; border-top-right-radius: 20px; box-shadow: 6px -6px 0 6px var(--canvas); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active] {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 22px rgba(var(--glow-blue), 0.35);
+}
+.app-sidebar .palette-trigger {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--sidebar-fg);
+}
+.app-sidebar .palette-trigger:hover { border-color: rgba(255, 255, 255, 0.4); }
+.app-sidebar .mantine-Kbd-root { background: rgba(255, 255, 255, 0.14); color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+.app-sidebar .sidebar-footer { border-top-color: rgba(255, 255, 255, 0.14) !important; }
+
+/* ---------------------------------------------------------------- solid stat cards (Jobie) */
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  color: #fff;
+  --mantine-color-dimmed: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 10px 24px -8px var(--tone-glow) !important;
+}
+.stat-card::after { /* soft highlight blob */
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+.stat-card[data-tone='indigo'] { background: linear-gradient(135deg, #6a3df5, #4b1fe0) !important; --tone-glow: rgba(85, 36, 243, 0.6); }
+.stat-card[data-tone='sky']    { background: linear-gradient(135deg, #4fb4ff, #1f7cfa) !important; --tone-glow: rgba(31, 124, 250, 0.55); }
+.stat-card[data-tone='green']  { background: linear-gradient(135deg, #2fd58a, #11a96a) !important; --tone-glow: rgba(17, 169, 106, 0.5); }
+.stat-card[data-tone='lime']   { background: linear-gradient(135deg, #9adf3e, #5fb51c) !important; --tone-glow: rgba(95, 181, 28, 0.5); }
+.stat-card[data-tone='gold']   { background: linear-gradient(135deg, #ffcf5c, #f5a300) !important; --tone-glow: rgba(245, 163, 0, 0.55); }
+.stat-card[data-tone='rose']   { background: linear-gradient(135deg, #ff7aa8, #f0386b) !important; --tone-glow: rgba(240, 56, 107, 0.5); }
+.stat-card .stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+.stat-card:hover { transform: translateY(-2px); }
+
+/* ---------------------------------------------------------------- brand bits (old class names) */
+.ig-text {
+  background: var(--ig-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ig-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--ig-gradient);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+.ig-ring { padding: 3px; border-radius: 50%; background: var(--ig-gradient); display: inline-block; }
+.ig-ring.muted { background: var(--mantine-color-default-border); }
+.ig-ring-inner {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 3px solid var(--canvas);
+  overflow: hidden;
+  background: var(--mantine-color-default-hover);
+  display: grid;
+  place-items: center;
+}
+.ig-ring-inner img { width: 100%; height: 100%; object-fit: cover; }
+.ig-story { background: none; border: 0; padding: 0; cursor: pointer; text-align: center; color: inherit; font: inherit; }
+.ig-story:focus-visible { outline: 2px solid var(--mantine-primary-color-filled); outline-offset: 4px; border-radius: 12px; }
+
+/* ---------------------------------------------------------------- wallpaper grid */
+.ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.ig-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--r-3);
+  cursor: pointer;
+  background: var(--mantine-color-default-hover);
+  border: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  box-shadow: var(--shadow-1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ig-tile:hover { box-shadow: var(--shadow-3); transform: translateY(-2px); }
+.ig-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.25s ease; }
+.ig-tile:hover img { transform: scale(1.04); }
+.ig-tile .ig-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 30%, rgba(0, 0, 0, 0.7));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  padding: 12px 8px;
+  text-align: center;
+}
+.ig-tile:hover .ig-overlay, .ig-tile:focus-visible .ig-overlay { opacity: 1; }
+.ig-tile .ig-badges { position: absolute; top: 6px; left: 6px; right: 6px; display: flex; gap: 4px; flex-wrap: wrap; pointer-events: none; }
+.ig-tile:focus-visible { outline: 3px solid rgba(var(--glow-blue), 0.9); outline-offset: 2px; }
+
+.ig-dropzone {
+  border-radius: var(--r-4) !important;
+  border: var(--b-strong) dashed var(--mantine-color-default-border) !important;
+  background: var(--surface) !important;
+  box-shadow: var(--shadow-1);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.ig-dropzone[data-accept] { border-color: rgba(var(--glow-blue), 0.9) !important; box-shadow: 0 0 0 4px rgba(var(--glow-blue), 0.15), 0 0 30px rgba(var(--glow-blue), 0.3); }
+
+/* Tile selection + quick actions */
+.ig-tile-wrap { position: relative; }
+.ig-tile-wrap .ig-select { position: absolute; top: 8px; right: 8px; opacity: 0; transition: opacity 0.15s ease; }
+.ig-tile-wrap:hover .ig-select,
+.ig-tile-wrap[data-selecting] .ig-select,
+.ig-tile-wrap .ig-select:focus-within { opacity: 1; }
+.ig-tile-wrap[data-selected] .ig-tile { outline: 3px solid rgba(var(--glow-blue), 0.95); outline-offset: 2px; box-shadow: 0 0 22px rgba(var(--glow-blue), 0.45); }
+.ig-tile-wrap[data-selected] .ig-tile img { transform: scale(0.94); }
+.ig-tile-wrap .ig-tools { position: absolute; bottom: 8px; right: 8px; display: flex; gap: 6px; opacity: 0; transition: opacity 0.15s ease; }
+.ig-tile-wrap:hover .ig-tools, .ig-tile-wrap .ig-tools:focus-within { opacity: 1; }
+@media (hover: none) { .ig-tile-wrap .ig-select, .ig-tile-wrap .ig-tools { opacity: 1; } }
+
+/* Floating bulk action bar */
+.bulk-bar {
+  position: sticky;
+  bottom: 16px;
+  z-index: 50;
+  align-self: center;
+  max-width: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-3), 0 0 0 1px rgba(var(--glow-blue), 0.25) !important;
+}
+
+/* Sidebar search button (opens the Ctrl+K palette) */
+.palette-trigger {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: var(--r-3);
+  border: var(--b-std) solid var(--mantine-color-default-border);
+  background: var(--mantine-color-default);
+  transition: border-color 0.15s ease;
+}
+.palette-trigger:hover { border-color: var(--mantine-primary-color-filled); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* Floating chart tooltip card (Jobie) */
+.chart-tip {
+  position: absolute;
+  top: 8px;
+  pointer-events: none;
+  padding: 10px 14px;
+  border-radius: var(--r-3);
+  background: var(--surface);
+  border: var(--b-std) solid var(--surface-line);
+  box-shadow: var(--shadow-3);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Theme-specific bits: .retro-only shows in light (Retro OS), .modern-only in dark */
+.retro-only { display: none !important; }
+:root[data-mantine-color-scheme='light'] .retro-only { display: revert !important; }
+:root[data-mantine-color-scheme='light'] .modern-only { display: none !important; }
+.check-mark { display: inline-flex; flex-shrink: 0; }
+
+/* ---------------------------------------------------------------- brand lockup */
+.brand-lockup { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.brand-mark { display: block; flex-shrink: 0; object-fit: cover; user-select: none; }
+.brand-word { font-weight: 700; font-size: 17px; letter-spacing: -0.02em; white-space: nowrap; }
+.brand-word-light { font-weight: 400; opacity: 0.62; }
+.brand-caption { margin-top: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mantine-color-dimmed); }
+.pixel-icon { display: block; image-rendering: pixelated; }
+
+/* ---------------------------------------------------------------- motion */
+/* Page change: the page slides up into place, its sections and grid cards follow one after another */
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(12px) scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes draw-in { from { clip-path: inset(-10% 100% -10% -10%); } to { clip-path: inset(-10% -10% -10% -10%); } }
+
+.page-enter { animation: page-in 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.page-enter > .mantine-Stack-root > *,
+.page-enter :is(.mantine-SimpleGrid-root, .mantine-Grid-inner) > * {
+  animation: rise-in 480ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--stagger, 0) * 55ms);
+}
+.page-enter :is(.mantine-SimpleGrid-root, .mantine-Grid-inner) > * { animation-delay: calc(120ms + var(--stagger, 0) * 55ms); }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(2) { --stagger: 1; }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(3) { --stagger: 2; }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(4) { --stagger: 3; }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(5) { --stagger: 4; }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(6) { --stagger: 5; }
+.page-enter :is(.mantine-Stack-root, .mantine-SimpleGrid-root, .mantine-Grid-inner) > :nth-child(n + 7) { --stagger: 6; }
+
+/* Chart lines draw themselves left to right (also when a series is switched back on) */
+.draw-in { animation: draw-in 900ms cubic-bezier(0.3, 0.7, 0.2, 1) backwards; animation-delay: 200ms; }
+
+/* Small feedback */
+.nav-item { transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+.nav-item .mantine-NavLink-section { transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.nav-item:hover .mantine-NavLink-section { transform: translateX(2px); }
+.ig-story .ig-ring { transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.ig-story:hover .ig-ring { transform: scale(1.06); }
+.ig-story:active .ig-ring { transform: scale(0.97); }
+.ig-tile img { transition: transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.ig-tile:hover img { transform: scale(1.05); }
+.done-toggle { transition: background-color 150ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter, .page-enter *, .draw-in { animation: none !important; }
+  .nav-item:hover .mantine-NavLink-section, .ig-story:hover .ig-ring, .ig-tile:hover img { transform: none; }
+}

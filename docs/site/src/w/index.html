@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open this wallpaper in {{APP_NAME}}</title>
+  <meta name="description" content="Someone shared a wallpaper from {{APP_NAME}} with you. Open it in the app.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="A wallpaper from {{APP_NAME}}">
+  <meta property="og:description" content="Tap to open it in the app.">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .share { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; }
+    .share-card { width: 100%; max-width: 380px; text-align: center; }
+    .share-card .mark { width: 84px; height: 84px; display: block; margin: 0 auto 20px; }
+    .share-card h1 { font-size: 26px; margin: 0 0 6px; }
+    .share-card p { color: var(--muted); margin: 0 0 24px; }
+    .share-card .btn { display: block; padding: 14px 20px; font-size: 17px; }
+    .share-card .btn.secondary { background: transparent; color: var(--accent); border: 1.5px solid var(--line); margin-top: 10px; }
+    .share-card .small { font-size: 14px; margin-top: 22px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main class="share">
+  <div class="share-card">
+    <img class="mark" src="../zeul-icon.png" width="84" height="84" alt="">
+
+    <div id="ok">
+      <h1>Someone shared a wallpaper with you</h1>
+      <p>Open it in {{APP_NAME}} to preview it and set it as your wallpaper.</p>
+      <a class="btn" id="open" href="#">Open in app</a>
+      <a class="btn secondary" id="get" href="{{PLAY_STORE_URL}}" data-store>Get {{APP_NAME}} on Google Play</a>
+      <p class="small" id="hint" hidden>Nothing happened? Install the app first, then tap <strong>Open in app</strong> again.</p>
+    </div>
+
+    <div id="bad" hidden>
+      <h1>This link looks broken</h1>
+      <p>The wallpaper link is incomplete. Ask whoever sent it to share it again from the app.</p>
+      <a class="btn" href="{{PLAY_STORE_URL}}" data-store>Get {{APP_NAME}} on Google Play</a>
+    </div>
+
+    <p class="small"><a href="../">About {{APP_NAME}}</a> · <a href="../privacy.html">Privacy</a></p>
+  </div>
+</main>
+<script>
+  (function () {
+    var PKG = '{{ANDROID_PACKAGE}}';
+    var STORE = '{{PLAY_STORE_URL}}';
+    var id = new URLSearchParams(location.search).get('id') || '';
+    var valid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+
+    // Before launch there is no Play URL yet: hide the store buttons instead of linking nowhere.
+    document.querySelectorAll('[data-store]').forEach(function (a) { if (!STORE) a.hidden = true; });
+
+    if (!valid) {
+      document.getElementById('ok').hidden = true;
+      document.getElementById('bad').hidden = false;
+      return;
+    }
+
+    var scheme = 'zeul://wallpaper/' + id;
+    var android = /Android/i.test(navigator.userAgent);
+    // Chrome on Android: an intent link opens the app when installed, otherwise falls back to the store (or stays here).
+    var href = android
+      ? 'intent://wallpaper/' + id + '#Intent;scheme=zeul;package=' + PKG +
+        (STORE ? ';S.browser_fallback_url=' + encodeURIComponent(STORE) : '') + ';end'
+      : scheme;
+
+    var open = document.getElementById('open');
+    open.href = href;
+    open.addEventListener('click', function () {
+      setTimeout(function () { if (!document.hidden) document.getElementById('hint').hidden = false; }, 1600);
+    });
+  })();
+</script>
+</body>
+</html>

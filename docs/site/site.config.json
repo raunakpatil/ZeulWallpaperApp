@@ -1,0 +1,12 @@
+{
+  "_comment": "Fill these in, then run: node docs/site/build.mjs --publish. Empty values render as highlighted [placeholders].",
+  "APP_NAME": "Zeul",
+  "CONTACT_EMAIL": "zeulwallpapers@gmail.com",
+  "PUBLISHERS": "Raunak Patil and Ghanshyam Paunikar",
+  "COUNTRY": "India",
+  "EFFECTIVE_DATE": "30 September 2026",
+  "PLAY_STORE_URL": "",
+  "ANDROID_PACKAGE": "com.zeul.wallpapers",
+  "ADMOB_PUBLISHER_ID": "pub-5768927601360645",
+  "SHA256_CERT_FINGERPRINTS": []
+}

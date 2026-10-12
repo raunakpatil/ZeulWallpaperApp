@@ -1,0 +1,38 @@
+<!-- Supabase → Authentication → Emails → Templates → "Confirm signup" (first sign-in of a new email).
+     Subject: {{ .Token }} is your Zeul code
+     The app (B7) asks for the 6-digit {{ .Token }}; dashboard sign-ups confirm with the same code (no links: they push the email into spam). -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Welcome to Zeul</title>
+</head>
+<body style="margin:0;padding:0;background:#f6f3ef;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#141414;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f3ef;padding:32px 16px;">
+    <tr><td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:440px;background:#ffffff;border-radius:20px;overflow:hidden;">
+        <tr><td style="background:#0d0d0d;padding:24px 32px;">
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+            <td style="width:44px;height:44px;vertical-align:middle;"><img src="https://raunakpatil.github.io/wallpaper-app-site/zeul-icon.png" width="44" height="44" alt="Zeul" style="display:block;border:0;outline:none;border-radius:11px;"></td>
+            <td style="padding-left:12px;font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#ffffff;">Zeul</td>
+          </tr></table>
+        </td></tr>
+        <tr><td style="padding:32px 32px 8px;">
+          <h1 style="margin:0 0 8px;font-size:22px;line-height:1.3;font-weight:700;color:#141414;">Welcome to Zeul</h1>
+          <p style="margin:0 0 24px;font-size:15px;line-height:1.55;color:#5c5650;">Enter this code to finish creating your account. Your favourites and unlocked wallpapers will sync to it.</p>
+          <div style="background:#fff3ec;border:1px solid #ffd2bd;border-radius:14px;padding:18px 12px;text-align:center;font-family:'SF Mono',Menlo,Consolas,'Courier New',monospace;font-size:34px;font-weight:700;letter-spacing:10px;color:#141414;">{{ .Token }}</div>
+          <p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#5c5650;">It expires in 10 minutes. Never share it: Zeul will never ask you for this code.</p>
+        </td></tr>
+        <tr><td style="padding:24px 32px 32px;">
+          <p style="margin:0;padding-top:20px;border-top:1px solid #ece5dd;font-size:12px;line-height:1.55;color:#8a837c;">
+            Didn't sign up? You can safely ignore this email; no account is created without the code.
+          </p>
+        </td></tr>
+      </table>
+      <p style="margin:16px 0 0;font-size:12px;color:#8a837c;">Zeul · <a href="https://raunakpatil.github.io/wallpaper-app-site/privacy.html" style="color:#8a837c;">Privacy</a></p>
+    </td></tr>
+  </table>
+</body>
+</html>

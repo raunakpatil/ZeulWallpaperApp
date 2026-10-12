@@ -1,0 +1,306 @@
+/* =====================================================================
+   DARK MODE: Apple-style, in Zeul's colours. Minimal, quiet, premium.
+   Depth comes from lighter fills, not shadows. One accent: the app icon's orange #FF4A01
+   (UI tone #FF5A1F so text on it stays crisp). Greys are pure neutral black, no tint.
+   Data: orange, amber, peach cream and coral, all from the same warm family.
+   ===================================================================== */
+:root[data-mantine-color-scheme='dark'] {
+  --bg: #070707;                      /* deep black */
+  --fill-1: #121212;                  /* cards */
+  --fill-2: #1b1b1b;                  /* raised: hover, selected, inputs */
+  --fill-3: #262626;                  /* pressed / controls */
+  --separator: rgba(255, 255, 255, 0.08);
+  --separator-strong: rgba(255, 255, 255, 0.14);
+  --label-1: #f5f5f5;
+  --label-2: rgba(245, 245, 245, 0.6);
+  --label-3: rgba(245, 245, 245, 0.32);
+  --accent: 255, 90, 31;              /* Zeul orange (icon #FF4A01, UI tone #FF5A1F) */
+  --accent-hex: #ff5a1f;
+  --data-2: 255, 196, 140;            /* peach cream (data) */
+
+  --canvas: var(--bg);
+  --surface: var(--fill-1);
+  --surface-line: var(--separator);
+  --shadow-1: none;
+  --shadow-2: none;
+  --shadow-3: 0 20px 50px rgba(0, 0, 0, 0.55);
+  --glow-blue: var(--accent);
+  --glow-brand: var(--accent);
+  --glow-gold: var(--data-2);
+
+  --mantine-color-body: var(--bg);
+  --mantine-color-text: var(--label-1);
+  --mantine-color-dimmed: var(--label-2);
+  --mantine-color-default: var(--fill-2);
+  --mantine-color-default-hover: var(--fill-3);
+  --mantine-color-default-border: var(--separator-strong);
+  --mantine-color-anchor: #ff8a52;
+  /* One accent everywhere (links, rings, checkboxes, light badges) */
+  --mantine-primary-color-filled: var(--accent-hex);
+  --mantine-primary-color-filled-hover: #ff6f3c;
+  --mantine-primary-color-light: rgba(255, 90, 31, 0.16);
+  --mantine-primary-color-light-hover: rgba(255, 90, 31, 0.24);
+  --mantine-primary-color-light-color: #ff9a66;
+  --mantine-color-brand-filled: var(--accent-hex);
+  --mantine-color-brand-filled-hover: #ff6f3c;
+  --mantine-color-brand-light: rgba(255, 90, 31, 0.16);
+  --mantine-color-brand-light-hover: rgba(255, 90, 31, 0.24);
+  --mantine-color-brand-light-color: #ff9a66;
+  --mantine-color-brand-text: #ff9a66;
+  --mantine-color-brand-outline: #ff8a52;
+  --mantine-color-brand-4: #ff8a52;
+  --mantine-color-brand-5: #ff6f3c;
+  --mantine-color-brand-6: var(--accent-hex);
+}
+
+/* Typography: SF on Apple devices, Inter elsewhere; tighter display headings */
+:root[data-mantine-color-scheme='dark'] body {
+  background: var(--bg) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif;
+  letter-spacing: -0.005em;
+}
+:root[data-mantine-color-scheme='dark'] :is(h1, h2, h3, .mantine-Title-root) {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, system-ui, sans-serif;
+  letter-spacing: -0.022em;
+  font-weight: 650;
+}
+
+/* ---------------------------------------------------------------- surfaces: flat fills, no shadows */
+:root[data-mantine-color-scheme='dark'] .mantine-Card-root {
+  background: var(--fill-1) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 18px;
+}
+:root[data-mantine-color-scheme='dark'] a.mantine-Card-root:hover,
+:root[data-mantine-color-scheme='dark'] .lift:hover { background: var(--fill-2) !important; transform: none; box-shadow: none !important; }
+
+/* Stat cards: Apple Health style. Coloured icon + label, big number, flat card */
+:root[data-mantine-color-scheme='dark'] .stat-card {
+  background: var(--fill-1) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--label-1);
+  --mantine-color-dimmed: var(--label-2);
+}
+:root[data-mantine-color-scheme='dark'] .stat-card::after { display: none; }
+:root[data-mantine-color-scheme='dark'] .stat-card:hover { background: var(--fill-2) !important; transform: none; box-shadow: none !important; }
+:root[data-mantine-color-scheme='dark'] .stat-card .stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(var(--tone-rgb), 0.16);
+  color: rgb(var(--tone-rgb));
+  box-shadow: none;
+}
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='indigo'] { --tone-rgb: 255, 106, 43; }   /* orange */
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='sky']    { --tone-rgb: 255, 176, 32; }   /* amber */
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='green']  { --tone-rgb: 255, 205, 160; }  /* peach cream */
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='lime']   { --tone-rgb: 255, 92, 122; }   /* coral */
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='gold']   { --tone-rgb: 255, 176, 32; }
+:root[data-mantine-color-scheme='dark'] .stat-card[data-tone='rose']   { --tone-rgb: 255, 92, 122; }
+
+/* ---------------------------------------------------------------- sidebar: frosted macOS source list */
+:root[data-mantine-color-scheme='dark'] .app-sidebar {
+  background: rgba(18, 18, 18, 0.72) !important;
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-right: 1px solid var(--separator) !important;
+  box-shadow: none !important;
+  --sidebar-dim: var(--label-3);
+  --sidebar-fg: var(--label-1);
+}
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item {
+  border-radius: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item .mantine-NavLink-description { display: block; font-size: 11px; color: var(--label-3); margin-top: 1px; }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active] .mantine-NavLink-description { color: var(--label-2); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item .mantine-NavLink-label { font-size: 14px !important; font-weight: 600 !important; }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item .mantine-NavLink-section { color: var(--label-2); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item:hover:not([data-active]) { background: rgba(255, 255, 255, 0.05); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active] {
+  margin-right: var(--mantine-spacing-md);
+  padding-right: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: var(--label-1);
+  box-shadow: none !important;
+}
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active] .mantine-NavLink-section { color: var(--accent-hex); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active]::before,
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-item[data-active]::after { display: none; }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .nav-group-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--label-3); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .ig-logo { background: var(--accent-hex); box-shadow: none; border-radius: 9px; }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .ig-text { background: none; -webkit-text-fill-color: var(--label-1); color: var(--label-1); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .palette-trigger {
+  background: rgba(150, 150, 150, 0.18);
+  border: 0;
+  border-radius: 9px;
+  box-shadow: none;
+}
+:root[data-mantine-color-scheme='dark'] .app-sidebar .mantine-Kbd-root { background: rgba(255, 255, 255, 0.08); border: 0; color: var(--label-2); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .sidebar-footer { border-top-color: var(--separator) !important; }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .mantine-Progress-root { background: rgba(255, 255, 255, 0.08); }
+:root[data-mantine-color-scheme='dark'] .app-sidebar .mantine-Progress-section { background: var(--label-2); box-shadow: none; }
+
+/* ---------------------------------------------------------------- controls */
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root { box-shadow: none !important; filter: none; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root[data-variant='gradient'] {
+  background: var(--accent-hex) !important;
+  border: 0 !important;
+  color: #fff;
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root[data-variant='gradient']:hover:not(:disabled) { background: #ff6f3c !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root[data-variant='default'] {
+  background: rgba(150, 150, 150, 0.24) !important;
+  border: 0 !important;
+  color: var(--label-1);
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root[data-variant='default']:hover:not(:disabled) { background: rgba(150, 150, 150, 0.32) !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root:active:not(:disabled) { transform: scale(0.98); opacity: 0.85; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root:disabled,
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root[data-disabled] { background: rgba(150, 150, 150, 0.12) !important; color: var(--label-3) !important; }
+
+:root[data-mantine-color-scheme='dark'] .mantine-Input-input {
+  background: rgba(150, 150, 150, 0.18) !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Input-input::placeholder { color: var(--label-3); }
+:root[data-mantine-color-scheme='dark'] .mantine-Input-input:focus,
+:root[data-mantine-color-scheme='dark'] .mantine-Input-input:focus-within {
+  border-color: rgba(var(--accent), 0.6) !important;
+  box-shadow: 0 0 0 3.5px rgba(var(--accent), 0.22) !important;
+}
+
+:root[data-mantine-color-scheme='dark'] .mantine-SegmentedControl-root { background: rgba(150, 150, 150, 0.24) !important; box-shadow: none !important; border: 0; padding: 2px; }
+:root[data-mantine-color-scheme='dark'] .mantine-SegmentedControl-indicator { background: #3a3a3a !important; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.4) !important; border: 0; }
+:root[data-mantine-color-scheme='dark'] .mantine-SegmentedControl-label[data-active] { color: #fff; }
+
+:root[data-mantine-color-scheme='dark'] .mantine-Switch-track { background: rgba(150, 150, 150, 0.32) !important; border: 0 !important; box-shadow: none !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Switch-input:checked + .mantine-Switch-track,
+:root[data-mantine-color-scheme='dark'] .mantine-Switch-track[data-checked] { background: var(--accent-hex) !important; box-shadow: none !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Switch-thumb { background: #fff !important; border: 0 !important; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.3) !important; }
+
+:root[data-mantine-color-scheme='dark'] .mantine-Checkbox-input { background: transparent; border: 1.5px solid var(--label-3); box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .mantine-Checkbox-input:checked { background: var(--accent-hex); border-color: var(--accent-hex); }
+:root[data-mantine-color-scheme='dark'] .mantine-Progress-root { background: rgba(255, 255, 255, 0.08); box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .mantine-Progress-section { background: var(--accent-hex); box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .mantine-Table-tbody .mantine-Table-tr:hover { background: rgba(255, 255, 255, 0.03); }
+:root[data-mantine-color-scheme='dark'] .mantine-Table-td, :root[data-mantine-color-scheme='dark'] .mantine-Table-th { border-color: var(--separator) !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Badge-root { box-shadow: none; }
+
+/* Chart lines: no glow */
+:root[data-mantine-color-scheme='dark'] svg path[style*='drop-shadow'] { filter: none !important; }
+
+/* ---------------------------------------------------------------- brand bits: plain and confident */
+:root[data-mantine-color-scheme='dark'] .ig-text { background: none; -webkit-text-fill-color: var(--label-1); color: var(--label-1); }
+:root[data-mantine-color-scheme='dark'] .ig-ring { padding: 2px; background: var(--accent-hex); box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .ig-ring.muted { background: rgba(255, 255, 255, 0.14); }
+:root[data-mantine-color-scheme='dark'] .ig-ring-inner { border: 3px solid var(--fill-1); background: var(--fill-2); }
+
+/* ---------------------------------------------------------------- tiles */
+:root[data-mantine-color-scheme='dark'] .ig-tile { border: 0; border-radius: 14px; box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .ig-tile:hover { transform: none; box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .ig-tile:hover img { transform: scale(1.03); }
+:root[data-mantine-color-scheme='dark'] .ig-tile-wrap[data-selected] .ig-tile { outline: 3px solid var(--accent-hex); outline-offset: 2px; box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .ig-dropzone { background: var(--fill-1) !important; border: 1.5px dashed var(--separator-strong) !important; box-shadow: none; }
+:root[data-mantine-color-scheme='dark'] .ig-dropzone[data-accept] { border-color: var(--accent-hex) !important; box-shadow: none; }
+
+/* ---------------------------------------------------------------- floating layers: frosted sheets */
+:root[data-mantine-color-scheme='dark'] :is(.mantine-Modal-content, .mantine-Popover-dropdown, .mantine-Menu-dropdown, .mantine-Spotlight-content, .mantine-Notification-root, .chart-tip) {
+  background: rgba(27, 27, 27, 0.82) !important;
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid var(--separator-strong) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55) !important;
+  border-radius: 14px;
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Drawer-content { background: var(--fill-1) !important; border-left: 1px solid var(--separator) !important; box-shadow: none !important; }
+:root[data-mantine-color-scheme='dark'] .bulk-bar {
+  background: rgba(27, 27, 27, 0.82) !important;
+  backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid var(--separator-strong) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55) !important;
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Menu-item:hover { background: var(--accent-hex); color: #fff; }
+
+@media (prefers-reduced-transparency: reduce) {
+  :root[data-mantine-color-scheme='dark'] .app-sidebar { background: #121212 !important; backdrop-filter: none; }
+}
+
+/* ---------------------------------------------------------------- depth + hierarchy pass */
+/* A faint violet light at the top of the page so the canvas isn't flat black */
+:root[data-mantine-color-scheme='dark'] .mantine-AppShell-main {
+  background:
+    radial-gradient(1200px 420px at 30% -120px, rgba(var(--accent), 0.09), transparent 70%),
+    var(--bg);
+}
+
+/* Cards: hairline edge + top highlight, the way macOS lifts a panel off the window */
+:root[data-mantine-color-scheme='dark'] .mantine-Card-root {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+:root[data-mantine-color-scheme='dark'] .mantine-Divider-root { --divider-color: var(--separator); }
+:root[data-mantine-color-scheme='dark'] .mantine-Divider-label { color: var(--label-3); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Stat cards: icon + label header, big tabular number, tone-tinted corner light */
+:root[data-mantine-color-scheme='dark'] .stat-card {
+  background:
+    radial-gradient(160px 120px at 100% 0%, rgba(var(--tone-rgb), 0.10), transparent 70%),
+    var(--fill-1) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+}
+:root[data-mantine-color-scheme='dark'] .stat-card:hover {
+  background:
+    radial-gradient(160px 120px at 100% 0%, rgba(var(--tone-rgb), 0.16), transparent 70%),
+    var(--fill-2) !important;
+  box-shadow: inset 0 0 0 1px rgba(var(--tone-rgb), 0.22) !important;
+}
+:root[data-mantine-color-scheme='dark'] .stat-card .stat-icon { width: 30px; height: 30px; border-radius: 9px; }
+:root[data-mantine-color-scheme='dark'] .stat-card .stat-label { color: var(--label-2) !important; font-weight: 590 !important; }
+:root[data-mantine-color-scheme='dark'] .stat-card .stat-value {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--label-1);
+}
+:root[data-mantine-color-scheme='dark'] .stat-card .stat-sub { color: rgb(var(--tone-rgb)) !important; opacity: 0.85; font-weight: 500; }
+.stat-chevron { flex-shrink: 0; opacity: 0.5; transition: transform 150ms ease, opacity 150ms ease; }
+.stat-card:hover .stat-chevron { opacity: 0.9; transform: translateX(2px); }
+:root[data-mantine-color-scheme='dark'] .stat-chevron { color: var(--label-3); }
+
+/* Activity header mini KPIs */
+:root[data-mantine-color-scheme='dark'] .kpi-mini .mantine-Text-root:last-child { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+
+/* Getting started: roomy rows, quiet "show completed" toggle */
+.done-toggle { border-radius: 8px; padding: 4px 6px; margin-left: -6px; }
+:root[data-mantine-color-scheme='dark'] .done-toggle:hover { background: var(--fill-2); }
+:root[data-mantine-color-scheme='dark'] .task-row .mantine-Anchor-root { color: var(--label-1); }
+:root[data-mantine-color-scheme='dark'] .task-row .mantine-Anchor-root:hover { color: rgb(var(--accent)); text-decoration: none; }
+
+/* Greeting: a touch larger, Apple display weight */
+:root[data-mantine-color-scheme='dark'] h1.mantine-Title-root { font-weight: 700; letter-spacing: -0.03em; }
+
+/* Brand: plain white wordmark, mark keeps its own gradient */
+:root[data-mantine-color-scheme='dark'] .brand-word { background: none; -webkit-text-fill-color: var(--label-1); color: var(--label-1); }
+:root[data-mantine-color-scheme='dark'] .brand-caption { color: var(--label-3); }
+:root[data-mantine-color-scheme='dark'] .brand-mark { box-shadow: none; }
+
+/* ---------------------------------------------------------------- motion: soft lift + press */
+:root[data-mantine-color-scheme='dark'] :is(a.mantine-Card-root, .stat-card) {
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 200ms ease, box-shadow 200ms ease !important;
+}
+:root[data-mantine-color-scheme='dark'] :is(a.mantine-Card-root, .stat-card):hover { transform: translateY(-3px); }
+:root[data-mantine-color-scheme='dark'] :is(a.mantine-Card-root, .stat-card):active { transform: translateY(-1px) scale(0.99); transition-duration: 90ms !important; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root { transition: transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 160ms ease, box-shadow 160ms ease; }
+:root[data-mantine-color-scheme='dark'] .mantine-Button-root:active { transform: scale(0.97); }
+:root[data-mantine-color-scheme='dark'] .mantine-ActionIcon-root:active { transform: scale(0.92); }
+@media (prefers-reduced-motion: reduce) {
+  :root[data-mantine-color-scheme='dark'] :is(a.mantine-Card-root, .stat-card):is(:hover, :active),
+  :root[data-mantine-color-scheme='dark'] :is(.mantine-Button-root, .mantine-ActionIcon-root):active { transform: none; }
+}

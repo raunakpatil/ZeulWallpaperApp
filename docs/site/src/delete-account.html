@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your account · {{APP_NAME}}</title>
+  <meta name="description" content="How to delete your {{APP_NAME}} account and data.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+{{HEADER}}
+<main>
+  <h1>Delete your {{APP_NAME}} account</h1>
+  <p class="meta">Published by {{PUBLISHERS}}</p>
+
+  <h2>Option 1: in the app (instant)</h2>
+  <ol>
+    <li>Open {{APP_NAME}} and sign in.</li>
+    <li>Go to <strong>Profile → Delete account</strong>.</li>
+    <li>Confirm. Your account is deleted immediately and you're signed out.</li>
+  </ol>
+
+  <h2>Option 2: by email (if you no longer have the app)</h2>
+  <p>Email {{CONTACT_EMAIL}} from the address you signed up with, with the subject <em>"Delete my account"</em>.
+    We'll confirm and delete it within 30 days.</p>
+
+  <h2>What gets deleted</h2>
+  <table>
+    <tr><th>Data</th><th>What happens</th></tr>
+    <tr><td>Account (email, name, profile photo)</td><td>Deleted permanently</td></tr>
+    <tr><td>Favourites, unlocked wallpapers, style preferences and interest scores</td><td>Deleted permanently</td></tr>
+    <tr><td>Past usage events (views, downloads)</td><td>Unlinked from you (anonymised) immediately, then deleted automatically within 90 days</td></tr>
+    <tr><td>Reports you submitted</td><td>Unlinked from your account; the report text is kept while the complaint is handled</td></tr>
+    <tr><td>Subscription</td><td><strong>Not cancelled automatically.</strong> Cancel it in Google Play (Payments &amp; subscriptions) before deleting your account. Google Play and RevenueCat keep purchase records as required for billing, tax and fraud prevention</td></tr>
+  </table>
+  <p>Deleting your account in the app also removes its favourites, unlocks and style picks from that device. Data saved
+    on a device without an account is removed when you uninstall the app or clear its data in Android settings.</p>
+
+  {{FOOTER}}
+</main>
+</body>
+</html>

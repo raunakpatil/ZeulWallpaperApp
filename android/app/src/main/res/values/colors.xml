@@ -1,0 +1,6 @@
+<resources>
+    <color name="ic_launcher_background">#FFFF4A01</color>
+    <!-- Boot intro (docs/design/boot-intro.md): the video's own orange, top and floor. -->
+    <color name="boot_intro_background">#FFF2550C</color>
+    <color name="boot_intro_floor">#FFF46C16</color>
+</resources>

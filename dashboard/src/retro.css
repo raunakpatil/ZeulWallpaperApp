@@ -1,0 +1,501 @@
+/* =====================================================================
+   LIGHT MODE: Retro OS. Loaded last; every rule is scoped to light mode.
+   Beige desktop · teal title bands · classic 3D bevels (light top-left, dark bottom-right) ·
+   sunken white inputs · raised buttons that press in · segmented progress · pixel headings.
+   ===================================================================== */
+:root[data-mantine-color-scheme='light'] {
+  --r-teal-900: #173d39;
+  --r-teal-800: #1f4f4a;
+  --r-teal-700: #2a6159;
+  --r-teal-500: #3f8478;
+  --r-blue: #3a65a0;
+  --r-blue-2: #5b86bd;
+  --r-desk: #e4ddcc;        /* desktop */
+  --r-panel: #eee8da;       /* window body */
+  --r-panel-2: #f6f2e8;     /* raised highlight areas */
+  --r-hi: #fffdf7;          /* bevel highlight */
+  --r-lo: #a59d8b;          /* bevel shadow */
+  --r-line: #847d6e;        /* window outline */
+  --r-ink: #1f1d19;
+  --r-ink-2: #5a554b;
+  --r-mustard: #c18f27;
+  --r-brick: #b0503a;
+
+  --bevel-out: inset 1px 1px 0 var(--r-hi), inset -1px -1px 0 var(--r-lo);
+  --bevel-out-2: inset 1px 1px 0 var(--r-hi), inset -1px -1px 0 var(--r-lo), inset 2px 2px 0 #f7f3e9, inset -2px -2px 0 #c4bcaa;
+  --bevel-in: inset 1px 1px 0 var(--r-lo), inset -1px -1px 0 var(--r-hi), inset 2px 2px 0 #c9c1af;
+
+  --canvas: var(--r-desk);
+  --surface: var(--r-panel);
+  --surface-line: var(--r-line);
+  --mantine-color-body: var(--r-desk);
+  --mantine-color-text: var(--r-ink);
+  --mantine-color-dimmed: var(--r-ink-2);
+  --mantine-color-default: var(--r-panel);
+  --mantine-color-default-hover: var(--r-panel-2);
+  --mantine-color-default-border: var(--r-line);
+  --mantine-color-anchor: var(--r-blue);
+  /* teal becomes the primary accent (links, checks, light badges, rings) */
+  --mantine-primary-color-filled: var(--r-teal-700);
+  --mantine-primary-color-filled-hover: var(--r-teal-800);
+  --mantine-primary-color-light: rgba(42, 97, 89, 0.14);
+  --mantine-primary-color-light-hover: rgba(42, 97, 89, 0.2);
+  --mantine-primary-color-light-color: var(--r-teal-800);
+  --mantine-color-brand-filled: var(--r-teal-700);
+  --mantine-color-brand-filled-hover: var(--r-teal-800);
+  --mantine-color-brand-light: rgba(42, 97, 89, 0.14);
+  --mantine-color-brand-light-color: var(--r-teal-800);
+  --mantine-color-brand-text: var(--r-teal-800);
+  --mantine-color-brand-4: var(--r-teal-500);
+  --mantine-color-brand-5: var(--r-teal-700);
+  --mantine-color-brand-6: var(--r-teal-700);
+  --mantine-color-brand-7: var(--r-teal-800);
+  --mantine-radius-default: 3px;
+}
+
+/* Desktop + classic UI type; pixel font for headings and big numbers */
+:root[data-mantine-color-scheme='light'] body {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    var(--r-desk) !important;
+  font-family: Tahoma, Verdana, 'Segoe UI', Inter, sans-serif;
+  color: var(--r-ink);
+}
+:root[data-mantine-color-scheme='light'] :is(h1, h2, h3, .mantine-Title-root) {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em;
+  color: var(--r-teal-900);
+}
+:root[data-mantine-color-scheme='light'] h1 { font-size: 44px !important; line-height: 1; }
+:root[data-mantine-color-scheme='light'] h2 { font-size: 38px !important; line-height: 1.05; }
+:root[data-mantine-color-scheme='light'] h3 { font-size: 30px !important; }
+
+/* ---------------------------------------------------------------- windows (cards) */
+:root[data-mantine-color-scheme='light'] .mantine-Card-root {
+  background: var(--r-panel) !important;
+  border: 1px solid var(--r-line) !important;
+  border-top: 7px solid var(--r-teal-800) !important;      /* title band */
+  border-radius: 3px !important;
+  box-shadow: var(--bevel-out), 2px 2px 0 rgba(31, 29, 25, 0.14) !important;
+  transform: none !important;
+}
+:root[data-mantine-color-scheme='light'] a.mantine-Card-root:hover { background: var(--r-panel-2) !important; }
+
+/* Stat cards: a little window; teal icon well, pixel-font number */
+:root[data-mantine-color-scheme='light'] .stat-card {
+  background: var(--r-panel) !important;
+  color: var(--r-ink);
+  --mantine-color-dimmed: var(--r-ink-2);
+}
+:root[data-mantine-color-scheme='light'] .stat-card::after { display: none; }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='indigo'] { border-top-color: var(--r-teal-800) !important; --tone: var(--r-teal-700); }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='sky']    { border-top-color: var(--r-blue) !important; --tone: var(--r-blue); }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='green']  { border-top-color: var(--r-mustard) !important; --tone: var(--r-mustard); }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='lime']   { border-top-color: var(--r-teal-500) !important; --tone: var(--r-teal-500); }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='rose']   { border-top-color: var(--r-brick) !important; --tone: var(--r-brick); }
+:root[data-mantine-color-scheme='light'] .stat-card[data-tone='gold']   { border-top-color: var(--r-mustard) !important; --tone: var(--r-mustard); }
+:root[data-mantine-color-scheme='light'] .stat-card .stat-icon {
+  border-radius: 2px;
+  background: var(--tone);
+  color: #fff;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.35), inset -1px -1px 0 rgba(0, 0, 0, 0.35), 1px 1px 0 var(--r-line);
+}
+:root[data-mantine-color-scheme='light'] .stat-card .stat-value {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-weight: 400 !important;
+  font-size: 46px !important;
+  line-height: 1 !important;
+  color: var(--r-teal-900);
+}
+:root[data-mantine-color-scheme='light'] .stat-card .stat-label { text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px !important; font-weight: 700 !important; }
+
+/* ---------------------------------------------------------------- sidebar: teal "start menu" */
+:root[data-mantine-color-scheme='light'] .app-sidebar {
+  background: var(--r-teal-800) !important;
+  border-right: 2px solid var(--r-teal-900) !important;
+  box-shadow: inset -1px 0 0 #2f6a62 !important;
+  --sidebar-fg: #f3eee2;
+  --sidebar-dim: #b9cbc4;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .ig-text { -webkit-text-fill-color: #f3eee2; font-family: 'VT323', monospace; font-weight: 400 !important; font-size: 24px !important; letter-spacing: 0.04em; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .ig-logo {
+  background: var(--r-panel);
+  color: var(--r-teal-800);
+  border-radius: 2px;
+  box-shadow: var(--bevel-out), 1px 1px 0 #0d2421;
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-group-label {
+  font-family: 'VT323', monospace;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em;
+  color: #9fc0b7;
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item {
+  border-radius: 2px;
+  margin-right: var(--mantine-spacing-md);
+  padding-right: 12px;
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item:hover:not([data-active]) { background: rgba(255, 255, 255, 0.08); }
+/* Selected item = a raised beige button */
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item[data-active] {
+  margin-right: var(--mantine-spacing-md);
+  padding-right: 12px;
+  border-radius: 2px;
+  background: var(--r-panel) !important;
+  color: var(--r-teal-900);
+  box-shadow: var(--bevel-out-2), 1px 1px 0 #0d2421 !important;
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item[data-active] .mantine-NavLink-description { color: var(--r-ink-2); opacity: 1; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item[data-active]::before,
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item[data-active]::after { display: none !important; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .palette-trigger {
+  background: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: var(--bevel-in);
+  color: var(--r-ink-2);
+}
+:root[data-mantine-color-scheme='light'] .app-sidebar .palette-trigger .mantine-Text-root { color: var(--r-ink-2); }
+:root[data-mantine-color-scheme='light'] .app-sidebar .palette-trigger svg { color: var(--r-ink-2); }
+:root[data-mantine-color-scheme='light'] .app-sidebar .mantine-Kbd-root { background: var(--r-panel); color: var(--r-ink-2); border: 1px solid var(--r-line); border-radius: 2px; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .sidebar-footer { border-top: 2px groove #5b8f86 !important; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .mantine-Progress-root { background: #0f2b28; border-radius: 1px; box-shadow: inset 1px 1px 0 #0a1f1d; }
+:root[data-mantine-color-scheme='light'] .app-sidebar .mantine-Progress-section {
+  background: repeating-linear-gradient(90deg, #8fd1c3 0 6px, transparent 6px 8px);
+  box-shadow: none;
+}
+
+/* ---------------------------------------------------------------- buttons */
+:root[data-mantine-color-scheme='light'] .mantine-Button-root,
+:root[data-mantine-color-scheme='light'] .mantine-ActionIcon-root:not(.app-sidebar .mantine-ActionIcon-root) {
+  border-radius: 3px !important;
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  transition: none;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='default'],
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='light'],
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='subtle'] {
+  background: var(--r-panel) !important;
+  color: var(--r-ink) !important;
+  border: 1px solid var(--r-line) !important;
+  box-shadow: var(--bevel-out-2) !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='light'][data-color='red'],
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='subtle'][data-color='red'] { color: var(--r-brick) !important; }
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='gradient'],
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='filled'] {
+  background: var(--r-teal-700) !important;
+  color: #fff !important;
+  border: 1px solid var(--r-teal-900) !important;
+  box-shadow: inset 1px 1px 0 #5c9c90, inset -1px -1px 0 #163a36, 2px 2px 0 rgba(31, 29, 25, 0.18) !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='gradient']:hover:not(:disabled),
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-variant='filled']:hover:not(:disabled) { background: #317067 !important; }
+:root[data-mantine-color-scheme='light'] .mantine-Button-root:active:not(:disabled) {
+  transform: translate(1px, 1px) !important;
+  box-shadow: var(--bevel-in) !important;
+  filter: none;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Button-root:disabled,
+:root[data-mantine-color-scheme='light'] .mantine-Button-root[data-disabled] {
+  background: var(--r-panel) !important;
+  color: #a8a092 !important;
+  text-shadow: 1px 1px 0 var(--r-hi);
+  border: 1px solid #b7af9e !important;
+  box-shadow: var(--bevel-out) !important;
+}
+
+/* ---------------------------------------------------------------- inputs: sunken white wells */
+:root[data-mantine-color-scheme='light'] .mantine-Input-input {
+  background: #fff !important;
+  border: 1px solid var(--r-line) !important;
+  border-radius: 2px !important;
+  box-shadow: var(--bevel-in) !important;
+  color: var(--r-ink);
+  font-family: Tahoma, Verdana, 'Segoe UI', sans-serif;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Input-input:focus,
+:root[data-mantine-color-scheme='light'] .mantine-Input-input:focus-within {
+  border-color: var(--r-teal-700) !important;
+  box-shadow: var(--bevel-in), 0 0 0 2px rgba(42, 97, 89, 0.35) !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Input-input:disabled { background: var(--r-panel) !important; color: #a8a092; }
+
+/* Checkbox / radio: square, sunken */
+:root[data-mantine-color-scheme='light'] .mantine-Checkbox-input {
+  background: #fff;
+  border: 1px solid var(--r-line);
+  border-radius: 1px !important;
+  box-shadow: var(--bevel-in);
+}
+:root[data-mantine-color-scheme='light'] .mantine-Checkbox-input:checked { background: #fff; border-color: var(--r-line); }
+:root[data-mantine-color-scheme='light'] .mantine-Checkbox-icon { color: var(--r-ink) !important; }
+
+/* Switch: ON/OFF block toggle */
+:root[data-mantine-color-scheme='light'] .mantine-Switch-track {
+  border-radius: 2px !important;
+  background: var(--r-panel) !important;
+  border: 1px solid var(--r-line) !important;
+  box-shadow: var(--bevel-in) !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Switch-input:checked + .mantine-Switch-track,
+:root[data-mantine-color-scheme='light'] .mantine-Switch-track[data-checked] {
+  background: var(--r-teal-700) !important;
+  border-color: var(--r-teal-900) !important;
+  box-shadow: inset 1px 1px 0 #163a36 !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Switch-thumb {
+  border-radius: 1px !important;
+  background: var(--r-panel) !important;
+  border: 1px solid var(--r-line) !important;
+  box-shadow: var(--bevel-out-2) !important;
+}
+
+/* Segmented control: folder tabs */
+:root[data-mantine-color-scheme='light'] .mantine-SegmentedControl-root {
+  background: var(--r-desk) !important;
+  border: 1px solid var(--r-line);
+  border-radius: 3px !important;
+  box-shadow: var(--bevel-in) !important;
+  padding: 3px;
+}
+:root[data-mantine-color-scheme='light'] .mantine-SegmentedControl-indicator {
+  background: var(--r-panel) !important;
+  border-radius: 2px !important;
+  box-shadow: var(--bevel-out-2) !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-SegmentedControl-label { font-family: Tahoma, Verdana, sans-serif; color: var(--r-ink-2); }
+:root[data-mantine-color-scheme='light'] .mantine-SegmentedControl-label[data-active] { color: var(--r-teal-900); font-weight: 700; }
+
+/* Progress: segmented blocks */
+:root[data-mantine-color-scheme='light'] .mantine-Progress-root {
+  background: #fff;
+  border: 1px solid var(--r-line);
+  border-radius: 1px !important;
+  box-shadow: var(--bevel-in);
+  height: 14px;
+  padding: 2px;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Progress-section {
+  background: repeating-linear-gradient(90deg, var(--r-teal-700) 0 8px, transparent 8px 10px) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+:root[data-mantine-color-scheme='light'] .mantine-RingProgress-root circle:last-of-type { stroke: var(--r-teal-700) !important; }
+
+/* Badges, chips, tags: flat labels with a hard outline */
+:root[data-mantine-color-scheme='light'] .mantine-Badge-root { border-radius: 2px !important; box-shadow: none; font-family: Tahoma, Verdana, sans-serif; }
+:root[data-mantine-color-scheme='light'] .mantine-Chip-label { border-radius: 2px !important; border: 1px solid var(--r-line); box-shadow: var(--bevel-out); background: var(--r-panel); }
+:root[data-mantine-color-scheme='light'] .mantine-Chip-input:checked + .mantine-Chip-label { box-shadow: var(--bevel-in); background: #e2dccd; color: var(--r-teal-900); }
+
+/* Tables: list rows with separators */
+:root[data-mantine-color-scheme='light'] .mantine-Table-thead { background: var(--r-teal-800); }
+:root[data-mantine-color-scheme='light'] .mantine-Table-th { color: #f3eee2 !important; font-weight: 700; border-color: var(--r-teal-900) !important; }
+:root[data-mantine-color-scheme='light'] .mantine-Table-td { border-color: #cfc7b5 !important; }
+:root[data-mantine-color-scheme='light'] .mantine-Table-tbody .mantine-Table-tr:hover { background: #e3f0ec; }
+
+/* Tooltip: classic yellow */
+:root[data-mantine-color-scheme='light'] .mantine-Tooltip-tooltip {
+  background: #ffffe1;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Tooltip-arrow { background: #ffffe1; border: 1px solid #000; }
+
+/* ---------------------------------------------------------------- dialogs, menus, toasts */
+:root[data-mantine-color-scheme='light'] :is(.mantine-Modal-content, .mantine-Menu-dropdown, .mantine-Popover-dropdown, .mantine-Spotlight-content, .mantine-Notification-root, .chart-tip) {
+  background: var(--r-panel) !important;
+  border: 1px solid var(--r-line) !important;
+  border-radius: 3px !important;
+  box-shadow: var(--bevel-out-2), 3px 3px 0 rgba(31, 29, 25, 0.25) !important;
+}
+/* Dialog title bar */
+:root[data-mantine-color-scheme='light'] .mantine-Modal-header {
+  background: linear-gradient(90deg, var(--r-blue), var(--r-blue-2));
+  color: #fff;
+  margin: 3px 3px 12px;
+  padding: 6px 10px;
+  min-height: 0;
+  border-radius: 1px;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Modal-title, :root[data-mantine-color-scheme='light'] .mantine-Modal-title * { color: #fff !important; font-size: 14px; }
+:root[data-mantine-color-scheme='light'] .mantine-Modal-close {
+  background: var(--r-panel);
+  color: var(--r-ink);
+  border-radius: 1px;
+  box-shadow: var(--bevel-out-2);
+  width: 22px;
+  height: 20px;
+  min-width: 0;
+  min-height: 0;
+}
+:root[data-mantine-color-scheme='light'] .mantine-Drawer-content { background: var(--r-panel) !important; border-left: 2px solid var(--r-line); }
+:root[data-mantine-color-scheme='light'] .mantine-Drawer-header { background: var(--r-teal-800); color: #f3eee2; }
+:root[data-mantine-color-scheme='light'] .mantine-Drawer-header * { color: #f3eee2 !important; }
+:root[data-mantine-color-scheme='light'] .mantine-Menu-item { border-radius: 0; font-family: Tahoma, Verdana, sans-serif; }
+:root[data-mantine-color-scheme='light'] .mantine-Menu-item:hover { background: var(--r-blue); color: #fff; }
+:root[data-mantine-color-scheme='light'] .mantine-Notification-root::before { border-radius: 0; }
+
+/* ---------------------------------------------------------------- brand bits */
+:root[data-mantine-color-scheme='light'] .ig-text { background: none; -webkit-text-fill-color: var(--r-teal-800); color: var(--r-teal-800); }
+:root[data-mantine-color-scheme='light'] .ig-ring { padding: 3px; background: var(--r-teal-700); box-shadow: 1px 1px 0 var(--r-line); }
+:root[data-mantine-color-scheme='light'] .ig-ring.muted { background: #b7af9e; }
+:root[data-mantine-color-scheme='light'] .ig-ring-inner { border: 2px solid var(--r-panel); background: #ddd6c6; }
+
+/* Wallpaper tiles: framed pictures */
+:root[data-mantine-color-scheme='light'] .ig-tile {
+  border-radius: 2px;
+  border: 1px solid var(--r-line);
+  box-shadow: var(--bevel-out), 2px 2px 0 rgba(31, 29, 25, 0.14);
+  padding: 3px;
+  background: var(--r-panel) !important;
+}
+:root[data-mantine-color-scheme='light'] .ig-tile img { border: 1px solid #8a8373; }
+:root[data-mantine-color-scheme='light'] .ig-tile:hover { transform: none; box-shadow: var(--bevel-out), 3px 3px 0 rgba(31, 29, 25, 0.22); }
+:root[data-mantine-color-scheme='light'] .ig-tile:hover img { transform: none; }
+:root[data-mantine-color-scheme='light'] .ig-tile .ig-overlay { inset: 3px; }
+:root[data-mantine-color-scheme='light'] .ig-tile-wrap[data-selected] .ig-tile { outline: 2px dotted var(--r-ink); outline-offset: 2px; box-shadow: var(--bevel-in); }
+:root[data-mantine-color-scheme='light'] .ig-dropzone {
+  background: #fff !important;
+  border: 2px dashed var(--r-line) !important;
+  border-radius: 3px !important;
+  box-shadow: var(--bevel-in);
+}
+:root[data-mantine-color-scheme='light'] .ig-dropzone[data-accept] { border-color: var(--r-teal-700) !important; background: #eef6f3 !important; }
+
+/* Floating bulk bar: a taskbar */
+:root[data-mantine-color-scheme='light'] .bulk-bar {
+  background: var(--r-panel) !important;
+  border: 1px solid var(--r-line) !important;
+  border-top: 2px solid var(--r-hi) !important;
+  border-radius: 3px !important;
+  box-shadow: var(--bevel-out-2), 3px 3px 0 rgba(31, 29, 25, 0.25) !important;
+  backdrop-filter: none;
+}
+
+/* Kbd, scrollbars */
+:root[data-mantine-color-scheme='light'] .mantine-Kbd-root { border-radius: 2px; box-shadow: var(--bevel-out); }
+:root[data-mantine-color-scheme='light'] ::-webkit-scrollbar { width: 16px; height: 16px; }
+:root[data-mantine-color-scheme='light'] ::-webkit-scrollbar-track { background: repeating-conic-gradient(#d9d2c2 0 25%, #e9e3d5 0 50%) 0 0 / 4px 4px; }
+:root[data-mantine-color-scheme='light'] ::-webkit-scrollbar-thumb { background: var(--r-panel); border: 1px solid var(--r-line); box-shadow: var(--bevel-out-2); }
+
+/* ---------------------------------------------------------------- small details, retro versions */
+/* Blinking terminal cursor after the greeting */
+:root[data-mantine-color-scheme='light'] .retro-cursor { color: var(--r-teal-700); animation: retro-blink 1.05s steps(1) infinite; }
+@keyframes retro-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { :root[data-mantine-color-scheme='light'] .retro-cursor { animation: none; } }
+
+/* Checklist: square sunken checkboxes with a tick instead of round icons */
+:root[data-mantine-color-scheme='light'] .check-mark svg { display: none; }
+:root[data-mantine-color-scheme='light'] .check-mark {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  background: #fff;
+  border: 1px solid var(--r-line);
+  box-shadow: var(--bevel-in);
+  align-items: center;
+  justify-content: center;
+  font: 700 13px/1 Tahoma, Verdana, sans-serif;
+  color: var(--r-ink);
+}
+:root[data-mantine-color-scheme='light'] .check-mark[data-done]::before { content: '\2713'; }
+
+/* Story bubbles become desktop icons: square framed pictures with a caption */
+:root[data-mantine-color-scheme='light'] .ig-ring,
+:root[data-mantine-color-scheme='light'] .ig-ring.muted {
+  border-radius: 2px;
+  padding: 3px;
+  background: var(--r-panel);
+  border: 1px solid var(--r-line);
+  box-shadow: var(--bevel-out-2), 1px 1px 0 rgba(31, 29, 25, 0.2);
+}
+:root[data-mantine-color-scheme='light'] .ig-ring-inner { border-radius: 0; border: 1px solid #8a8373; background: #ddd6c6; }
+:root[data-mantine-color-scheme='light'] .ig-story:focus-visible { outline: 1px dotted var(--r-ink); outline-offset: 3px; border-radius: 0; }
+:root[data-mantine-color-scheme='light'] .ig-story .mantine-Text-root { font-family: Tahoma, Verdana, sans-serif; }
+
+/* Avatars: square framed photos */
+:root[data-mantine-color-scheme='light'] .mantine-Avatar-root { border-radius: 2px !important; border: 1px solid var(--r-line) !important; box-shadow: var(--bevel-out); }
+:root[data-mantine-color-scheme='light'] .mantine-Avatar-image { border-radius: 0; }
+
+/* Icon badges (Tip, setup boxes, empty states): square bevelled tiles */
+:root[data-mantine-color-scheme='light'] .mantine-ThemeIcon-root {
+  border-radius: 2px !important;
+  background: var(--r-blue) !important;
+  color: #fff !important;
+  border: 1px solid #22426e;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.35), inset -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+:root[data-mantine-color-scheme='light'] .mantine-ThemeIcon-root[data-variant='light'] { background: var(--r-teal-700) !important; border-color: var(--r-teal-900); }
+
+/* Links: classic blue, underlined */
+:root[data-mantine-color-scheme='light'] .mantine-Anchor-root { color: var(--r-blue) !important; text-decoration: underline; text-underline-offset: 2px; }
+:root[data-mantine-color-scheme='light'] .mantine-Anchor-root:hover { color: #1f3f73 !important; }
+
+/* Struck-through finished tasks read as greyed-out menu items */
+:root[data-mantine-color-scheme='light'] .mantine-Text-root[style*='line-through'],
+:root[data-mantine-color-scheme='light'] .mantine-Text-root[data-td='line-through'] { color: #8f887a !important; text-shadow: 1px 1px 0 var(--r-hi); }
+
+/* Notification/toast accent bar becomes a square stripe; loaders become block spinners */
+:root[data-mantine-color-scheme='light'] .mantine-Loader-root { --loader-color: var(--r-teal-700); }
+
+/* Labels and small text keep the classic face */
+:root[data-mantine-color-scheme='light'] :is(.mantine-InputWrapper-label, .mantine-Switch-label, .mantine-Checkbox-label, .mantine-NavLink-label) { font-family: Tahoma, Verdana, 'Segoe UI', sans-serif; }
+
+:root[data-mantine-color-scheme='light'] .mantine-Avatar-placeholder { border-radius: 0; background: var(--r-panel-2); color: var(--r-teal-800); font-family: 'VT323', monospace; font-size: 20px; }
+
+/* Profile photos were cropped from round pictures: in a square frame, zoom past the dark corners
+   (1.42 ≈ √2, the square that fits inside the circle) and nudge up so faces stay centred. */
+:root[data-mantine-color-scheme='light'] .mantine-Avatar-image { transform: scale(1.42) translateY(3%); }
+/* One frame only: the retro .ig-ring frame already surrounds the avatar */
+:root[data-mantine-color-scheme='light'] .ig-ring .mantine-Avatar-root { border: 0 !important; box-shadow: none !important; }
+/* Team photos sit side by side (overlapping looks wrong with square frames) */
+:root[data-mantine-color-scheme='light'] .mantine-AvatarGroup-group { display: flex; gap: 8px; }
+:root[data-mantine-color-scheme='light'] .mantine-AvatarGroup-group .mantine-Avatar-root { margin-inline-start: 0 !important; }
+
+/* Stat card header row: smaller icon well beside the label */
+:root[data-mantine-color-scheme='light'] .stat-card .stat-icon { width: 30px; height: 30px; }
+:root[data-mantine-color-scheme='light'] .stat-chevron { color: var(--r-ink-2); opacity: 1; }
+:root[data-mantine-color-scheme='light'] .mantine-Divider-label { font-family: Tahoma, Verdana, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; color: var(--r-ink-2); }
+:root[data-mantine-color-scheme='light'] .done-toggle:hover { background: var(--r-desk); }
+
+/* Brand mark, retro: the hamster in a square bevelled frame */
+:root[data-mantine-color-scheme='light'] .brand-mark { border-radius: 2px !important; border: 1px solid var(--r-line); box-shadow: var(--bevel-out), 1px 1px 0 #0d2421; image-rendering: auto; }
+:root[data-mantine-color-scheme='light'] .brand-caption { font-family: Tahoma, Verdana, sans-serif; color: #b9d3cd; letter-spacing: 0.1em; }
+:root[data-mantine-color-scheme='light'] .brand-word-light { opacity: 0.75; }
+
+/* Pixel-art icons (lib/icons -> PixelIcon) */
+:root[data-mantine-color-scheme='light'] .app-sidebar .pixel-icon { filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.35)); }
+:root[data-mantine-color-scheme='light'] .app-sidebar .nav-item[data-active] .pixel-icon { filter: none; }
+
+/* Stat-card icon tile: a sunken white well holding the pixel icon */
+:root[data-mantine-color-scheme='light'] .stat-card .stat-icon { width: 34px; height: 34px; background: #fff; box-shadow: var(--bevel-in); border: 1px solid var(--r-line); }
+
+/* ---------------------------------------------------------------- motion, retro: stepped like an old OS */
+/* Windows "unroll" top to bottom in a few hard steps instead of fading */
+@keyframes retro-open { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes retro-draw { from { clip-path: inset(-10% 100% -10% -10%); } to { clip-path: inset(-10% -10% -10% -10%); } }
+:root[data-mantine-color-scheme='light'] .page-enter { animation: none; }
+:root[data-mantine-color-scheme='light'] .page-enter > .mantine-Stack-root > *,
+:root[data-mantine-color-scheme='light'] .page-enter :is(.mantine-SimpleGrid-root, .mantine-Grid-inner) > * {
+  animation-name: retro-open;
+  animation-duration: 240ms;
+  animation-timing-function: steps(4, end);
+  animation-delay: calc(var(--stagger, 0) * 70ms);
+}
+:root[data-mantine-color-scheme='light'] .draw-in { animation-name: retro-draw; animation-duration: 800ms; animation-timing-function: steps(16, end); }
+
+/* No gliding: hover/press effects snap */
+:root[data-mantine-color-scheme='light'] .nav-item:hover .mantine-NavLink-section,
+:root[data-mantine-color-scheme='light'] .ig-tile:hover img { transform: none; }
+:root[data-mantine-color-scheme='light'] .ig-story .ig-ring { transition: none; }
+:root[data-mantine-color-scheme='light'] .ig-story:hover .ig-ring { transform: translate(-1px, -1px); }
+:root[data-mantine-color-scheme='light'] .ig-story:active .ig-ring { transform: translate(1px, 1px); box-shadow: var(--bevel-in); }
+:root[data-mantine-color-scheme='light'] .nav-item { transition: none; }

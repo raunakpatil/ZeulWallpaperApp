@@ -1,0 +1,64 @@
+# ---------- Secrets (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+local.properties
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+service-account*.json
+supabase/.env
+supabase/functions/.env
+
+# ---------- Claude Code (personal) ----------
+.claude/settings.local.json
+
+# ---------- Android ----------
+*.iml
+.gradle/
+/android/build/
+/android/**/build/
+/android/captures/
+/android/.externalNativeBuild/
+/android/.cxx/
+.idea/
+*.apk
+*.aab
+*.hprof
+
+# ---------- Web dashboard ----------
+node_modules/
+dist/
+.vite/
+.vercel/
+.netlify/
+coverage/
+*.log
+npm-debug.log*
+
+# ---------- Supabase local ----------
+supabase/.branches/
+supabase/.temp/
+
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+
+# Local secret notes (never commit)
+*password*.txt
+*secret*.txt
+*token*.txt
+
+# Generated website output
+docs/site/dist/
+docs/site/.publish/
+
+# Service-account / private-key JSON files (never commit; set them as Supabase/GitHub secrets instead)
+*-firebase-adminsdk-*.json
+habit-smasher-fc823-*.json
+*service-account*.json
+*serviceAccount*.json

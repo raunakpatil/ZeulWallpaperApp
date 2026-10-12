@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.webp binary
+*.jks binary
+
+# The team log is append-only: when both devs add entries at the same time,
+# keep both sides instead of producing a merge conflict.

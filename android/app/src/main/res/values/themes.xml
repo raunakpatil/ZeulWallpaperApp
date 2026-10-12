@@ -1,0 +1,10 @@
+<resources>
+    <!-- Compose draws the real Material 3 theme; this only covers the window before the first frame. -->
+    <style name="Theme.WallpaperApp" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Launch window (Android 8–11): the boot video's orange, so the intro starts without a white flash.
+         MainActivity switches to Theme.WallpaperApp before drawing. -->
+    <style name="Theme.WallpaperApp.Launch" parent="Theme.WallpaperApp">
+        <item name="android:windowBackground">@color/boot_intro_background</item>
+    </style>
+</resources>

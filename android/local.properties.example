@@ -1,0 +1,18 @@
+# Copy to local.properties (git-ignored) and fill in. Get the values privately from the other dev.
+# Android Studio adds sdk.dir automatically.
+# sdk.dir=/Users/<you>/Library/Android/sdk
+
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+# Leave empty to use Google's AdMob TEST app id. Never put the real id here until launch (A13).
+ADMOB_APP_ID=
+# Real AdMob unit ids (A13). Only used by RELEASE builds; debug builds always use test ads.
+ADMOB_REWARDED_ID=
+ADMOB_NATIVE_ID=
+ADMOB_APP_OPEN_ID=
+REVENUECAT_KEY=
+
+# Optional dev switch: true = use built-in fake wallpapers instead of Supabase (handy while the DB is empty).
+USE_FAKE_BACKEND=false
+# OAuth Web client id (Google Cloud → Clients → Supabase (web)); not secret
+GOOGLE_WEB_CLIENT_ID=

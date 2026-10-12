@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="356" viewBox="0 0 760 356" role="img" aria-label="Commits per day by developer, 30 Sep to 12 Oct 2026">
+<rect x="0.5" y="0.5" width="759" height="355" rx="12" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+<text x="24" y="36" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="600" fill="#0b0b0b">Commits per day</text>
+<text x="24" y="58" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#52514e">Two developers, 13 days, 222 commits. Most of the app was built in the first three days.</text>
+<rect x="24" y="70" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="40" y="79" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#52514e">Raunak</text>
+<rect x="104" y="70" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="120" y="79" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#52514e">Ghanshyam</text>
+<line x1="52" x2="740" y1="310.0" y2="310.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="44" y="314.0" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">0</text>
+<line x1="52" x2="740" y1="259.5" y2="259.5" stroke="#e1e0d9" stroke-width="1"/>
+<text x="44" y="263.5" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">20</text>
+<line x1="52" x2="740" y1="209.0" y2="209.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="44" y="213.0" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">40</text>
+<line x1="52" x2="740" y1="158.5" y2="158.5" stroke="#e1e0d9" stroke-width="1"/>
+<text x="44" y="162.5" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">60</text>
+<line x1="52" x2="740" y1="108.0" y2="108.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="44" y="112.0" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">80</text>
+<rect x="63.6" y="186.3" width="29.6" height="123.7" fill="#2a78d6"/>
+<path d="M63.6,184.3 V127.1 Q63.6,123.1 67.6,123.1 H89.3 Q93.3,123.1 93.3,127.1 V184.3 Z" fill="#eb6834"/>
+<title>30 Sep: Raunak 49, Ghanshyam 25</title>
+<text x="78.5" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">30 Sep</text>
+<rect x="116.6" y="239.3" width="29.6" height="70.7" fill="#2a78d6"/>
+<path d="M116.6,237.3 V200.4 Q116.6,196.4 120.6,196.4 H142.2 Q146.2,196.4 146.2,200.4 V237.3 Z" fill="#eb6834"/>
+<title>01 Oct: Raunak 28, Ghanshyam 17</title>
+<rect x="169.5" y="198.9" width="29.6" height="111.1" fill="#2a78d6"/>
+<path d="M169.5,196.9 V165.0 Q169.5,161.0 173.5,161.0 H195.1 Q199.1,161.0 199.1,165.0 V196.9 Z" fill="#eb6834"/>
+<title>02 Oct: Raunak 44, Ghanshyam 15</title>
+<text x="184.3" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">2 Oct</text>
+<path d="M222.4,310.0 V293.8 Q222.4,289.8 226.4,289.8 H248.0 Q252.0,289.8 252.0,293.8 V310.0 Z" fill="#2a78d6"/>
+<title>03 Oct: Raunak 8, Ghanshyam 0</title>
+<path d="M275.3,310.0 V303.9 Q275.3,299.9 279.3,299.9 H301.0 Q305.0,299.9 305.0,303.9 V310.0 Z" fill="#2a78d6"/>
+<title>04 Oct: Raunak 4, Ghanshyam 0</title>
+<text x="290.2" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">4 Oct</text>
+<path d="M328.3,310.0 V288.8 Q328.3,284.8 332.3,284.8 H353.9 Q357.9,284.8 357.9,288.8 V310.0 Z" fill="#eb6834"/>
+<title>05 Oct: Raunak 0, Ghanshyam 10</title>
+<rect x="381.2" y="304.9" width="29.6" height="5.1" fill="#2a78d6"/>
+<path d="M381.2,302.9 V263.5 Q381.2,259.5 385.2,259.5 H406.8 Q410.8,259.5 410.8,263.5 V302.9 Z" fill="#eb6834"/>
+<title>06 Oct: Raunak 2, Ghanshyam 18</title>
+<text x="396.0" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">6 Oct</text>
+<text x="501.8" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">8 Oct</text>
+<text x="607.7" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">10 Oct</text>
+<path d="M698.7,310.0 V308.9 Q698.7,304.9 702.7,304.9 H724.4 Q728.4,304.9 728.4,308.9 V310.0 Z" fill="#2a78d6"/>
+<title>12 Oct: Raunak 2, Ghanshyam 0</title>
+<text x="713.5" y="328" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#898781">12 Oct</text>
+<text x="78.5" y="115.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#0b0b0b">74</text>
+</svg>

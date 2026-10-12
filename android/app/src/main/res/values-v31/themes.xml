@@ -1,0 +1,8 @@
+<resources>
+    <!-- Android 12+ system splash: the hamster icon on the boot video's orange; it fades into the intro. -->
+    <style name="Theme.WallpaperApp.Launch" parent="Theme.WallpaperApp">
+        <item name="android:windowSplashScreenBackground">@color/boot_intro_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/boot_splash_icon</item>
+        <item name="android:windowBackground">@color/boot_intro_background</item>
+    </style>
+</resources>
