@@ -1,4 +1,4 @@
-# Publishes the landing page (website/) to GitHub Pages: https://raunakpatil.github.io/zeul/
+# Publishes the landing page (website/) to GitHub Pages: https://raunakpatil.github.io/ZeulWallpaperApp/
 name: Website
 
 on:

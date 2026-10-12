@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Report a wallpaper
-    url: https://github.com/raunakpatil/zeul#by-the-community-for-the-community
+    url: https://github.com/raunakpatil/ZeulWallpaperApp#by-the-community-for-the-community
     about: Use "Report" on the wallpaper inside the app; it reaches the moderators fastest.
   - name: Questions and ideas
-    url: https://github.com/raunakpatil/zeul/discussions
+    url: https://github.com/raunakpatil/ZeulWallpaperApp/discussions
     about: Ask, share your setup, or float an idea before opening an issue.
   - name: Security problem
-    url: https://github.com/raunakpatil/zeul/security/advisories/new
+    url: https://github.com/raunakpatil/ZeulWallpaperApp/security/advisories/new
     about: Please report vulnerabilities privately.

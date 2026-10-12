@@ -3,9 +3,9 @@
 Thanks for helping. Zeul is a community app, and there are lots of ways in:
 
 - **Wallpapers:** upload your own from the app (Home → upload button). No code needed.
-- **Bugs and ideas:** open an [issue](https://github.com/raunakpatil/zeul/issues/new/choose).
+- **Bugs and ideas:** open an [issue](https://github.com/raunakpatil/ZeulWallpaperApp/issues/new/choose).
 - **Code, design, docs:** open a pull request (below).
-- **Questions and show-and-tell:** [Discussions](https://github.com/raunakpatil/zeul/discussions).
+- **Questions and show-and-tell:** [Discussions](https://github.com/raunakpatil/ZeulWallpaperApp/discussions).
 
 ## Getting set up
 

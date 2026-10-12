@@ -3,7 +3,7 @@
 ## Reporting a vulnerability
 
 Please **don't open a public issue** for security problems. Instead, use GitHub's
-[private vulnerability reporting](https://github.com/raunakpatil/zeul/security/advisories/new)
+[private vulnerability reporting](https://github.com/raunakpatil/ZeulWallpaperApp/security/advisories/new)
 or email **zeulwallpapers@gmail.com** with steps to reproduce.
 
 We'll reply within a few days, keep you updated, and credit you in the fix if you'd like.

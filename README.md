@@ -9,10 +9,10 @@
 Zeul is a free, open-source **Android wallpaper app** with hand-picked HD and **AMOLED wallpapers**, community uploads,
 an auto wallpaper changer and a soft, tactile UI. No account needed. Built with Kotlin, Jetpack Compose and Supabase.
 
-**[Website](https://raunakpatil.github.io/zeul/)** · **[Download the APK](https://github.com/raunakpatil/zeul/releases/latest)** · **[Contribute](CONTRIBUTING.md)**
+**[Website](https://raunakpatil.github.io/ZeulWallpaperApp/)** · **[Download the APK](https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest)** · **[Contribute](CONTRIBUTING.md)**
 
-[![Download](https://img.shields.io/github/v/release/raunakpatil/zeul?label=Download%20APK&color=EB6834&logo=android&logoColor=white)](https://github.com/raunakpatil/zeul/releases/latest)
-[![CI](https://github.com/raunakpatil/zeul/actions/workflows/ci.yml/badge.svg)](https://github.com/raunakpatil/zeul/actions/workflows/ci.yml)
+[![Download](https://img.shields.io/github/v/release/raunakpatil/ZeulWallpaperApp?label=Download%20APK&color=EB6834&logo=android&logoColor=white)](https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest)
+[![CI](https://github.com/raunakpatil/ZeulWallpaperApp/actions/workflows/ci.yml/badge.svg)](https://github.com/raunakpatil/ZeulWallpaperApp/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-2A78D6.svg)](LICENSE)
 ![Android 8.0+](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
@@ -43,7 +43,7 @@ an auto wallpaper changer and a soft, tactile UI. No account needed. Built with 
 
 ## Download
 
-Grab the latest signed APK from **[Releases](https://github.com/raunakpatil/zeul/releases/latest)** and open it on your phone
+Grab the latest signed APK from **[Releases](https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest)** and open it on your phone
 (Android 8.0 or newer; allow "install unknown apps" for your browser or file manager when asked).
 
 Every release lists its SHA-256 checksum so you can verify the file.
@@ -355,7 +355,7 @@ brand/        logo, icons, the boot video
 ### Quick start (no backend needed)
 
 ```bash
-git clone https://github.com/raunakpatil/zeul.git
+git clone https://github.com/raunakpatil/ZeulWallpaperApp.git
 cd zeul/android
 cp local.properties.example local.properties   # then set USE_FAKE_BACKEND=true
 ./gradlew installDebug
@@ -386,9 +386,9 @@ cd android; .\gradlew assembleRelease
 Contributions are welcome, whether code, design, translations or wallpapers. Start with **[CONTRIBUTING.md](CONTRIBUTING.md)**,
 and please follow the **[Code of Conduct](CODE_OF_CONDUCT.md)**. Found a security problem? See **[SECURITY.md](SECURITY.md)** (please don't open a public issue).
 
-- 🐛 [Report a bug](https://github.com/raunakpatil/zeul/issues/new?template=bug_report.yml)
-- 💡 [Suggest a feature](https://github.com/raunakpatil/zeul/issues/new?template=feature_request.yml)
-- 💬 [Ask or share in Discussions](https://github.com/raunakpatil/zeul/discussions)
+- 🐛 [Report a bug](https://github.com/raunakpatil/ZeulWallpaperApp/issues/new?template=bug_report.yml)
+- 💡 [Suggest a feature](https://github.com/raunakpatil/ZeulWallpaperApp/issues/new?template=feature_request.yml)
+- 💬 [Ask or share in Discussions](https://github.com/raunakpatil/ZeulWallpaperApp/discussions)
 
 ## FAQ
 
@@ -399,7 +399,7 @@ Yes. Zeul is free to download and use, and its source code is open under GPL-3.0
 
 <details><summary><b>How do I install the Zeul APK on Android?</b></summary>
 
-Open the [latest release](https://github.com/raunakpatil/zeul/releases/latest) on your phone, download `zeul-1.0.0.apk`, open it and allow your browser or file manager to install apps when asked. Android 8.0 or newer.
+Open the [latest release](https://github.com/raunakpatil/ZeulWallpaperApp/releases/latest) on your phone, download `zeul-1.0.0.apk`, open it and allow your browser or file manager to install apps when asked. Android 8.0 or newer.
 </details>
 
 <details><summary><b>Can I upload my own wallpapers?</b></summary>
